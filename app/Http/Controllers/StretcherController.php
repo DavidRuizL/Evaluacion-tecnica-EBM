@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\AnesthesiaUnit;
+use App\Models\Stretcher;
 use Illuminate\Http\Request;
 
-class AnesthesiaUnitController extends Controller
+class StretcherController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class AnesthesiaUnitController extends Controller
      */
     public function index()
     {
-        $AUnit=  \App\Models\AnesthesiaUnit::all();
-        return view('aunit.index')->with('anesthesiaunits', $AUnit);
+        $stretcher=  \App\Models\Stretcher::all();
+        return view('stretcher.index')->with('stretchers', $stretcher);
     }
 
     /**
@@ -42,10 +42,10 @@ class AnesthesiaUnitController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\AnesthesiaUnit  $anesthesiaUnit
+     * @param  \App\Models\Stretcher  $stretcher
      * @return \Illuminate\Http\Response
      */
-    public function show(AnesthesiaUnit $anesthesiaUnit)
+    public function show(Stretcher $stretcher)
     {
         //
     }
@@ -53,10 +53,10 @@ class AnesthesiaUnitController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\AnesthesiaUnit  $anesthesiaUnit
+     * @param  \App\Models\Stretcher  $stretcher
      * @return \Illuminate\Http\Response
      */
-    public function edit(AnesthesiaUnit $anesthesiaUnit)
+    public function edit(Stretcher $stretcher)
     {
         //
     }
@@ -65,10 +65,10 @@ class AnesthesiaUnitController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\AnesthesiaUnit  $anesthesiaUnit
+     * @param  \App\Models\Stretcher  $stretcher
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, AnesthesiaUnit $anesthesiaUnit)
+    public function update(Request $request, Stretcher $stretcher)
     {
         //
     }
@@ -76,10 +76,10 @@ class AnesthesiaUnitController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\AnesthesiaUnit  $anesthesiaUnit
+     * @param  \App\Models\Stretcher  $stretcher
      * @return \Illuminate\Http\Response
      */
-    public function destroy(AnesthesiaUnit $anesthesiaUnit)
+    public function destroy(Stretcher $stretcher)
     {
         //
     }

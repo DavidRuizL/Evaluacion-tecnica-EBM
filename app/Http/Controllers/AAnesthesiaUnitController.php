@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\AnesthesiaUnit;
 use Illuminate\Http\Request;
 
-class AnesthesiaUnitController extends Controller
+class AAnesthesiaUnitController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,8 @@ class AnesthesiaUnitController extends Controller
      */
     public function index()
     {
-        $AUnit=  \App\Models\AnesthesiaUnit::all();
-        return view('aunit.index')->with('anesthesiaunits', $AUnit);
+        $AAUnit=  \App\Models\AAnesthesiaUnit::all();
+        return view('aunit.index')->with('aanesthesiaunits', $AAUnit);
     }
 
     /**
@@ -42,10 +41,10 @@ class AnesthesiaUnitController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\AnesthesiaUnit  $anesthesiaUnit
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(AnesthesiaUnit $anesthesiaUnit)
+    public function show($id)
     {
         //
     }
@@ -53,10 +52,10 @@ class AnesthesiaUnitController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\AnesthesiaUnit  $anesthesiaUnit
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(AnesthesiaUnit $anesthesiaUnit)
+    public function edit($id)
     {
         //
     }
@@ -65,10 +64,10 @@ class AnesthesiaUnitController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\AnesthesiaUnit  $anesthesiaUnit
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, AnesthesiaUnit $anesthesiaUnit)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -76,10 +75,10 @@ class AnesthesiaUnitController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\AnesthesiaUnit  $anesthesiaUnit
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(AnesthesiaUnit $anesthesiaUnit)
+    public function destroy($id)
     {
         //
     }

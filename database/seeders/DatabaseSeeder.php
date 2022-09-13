@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(AnesthesiaUnitSeeder::class);
         $this->call(AAnesthesiaUnitSeeder::class);
+        $this->call(StretcherSeeder::class);
     }
 }
