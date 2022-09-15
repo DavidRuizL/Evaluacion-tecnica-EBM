@@ -23,97 +23,187 @@
           <table border="1" class="table table-hover table-ligth  table-bordered table-stripe">
             <thead class="table-secondary">
               <tr>
-                <th scope="col">Manufacturer</th>
-                <th scope="col">Where Marketed</th>
-                <th scope="col">FDA Clearance</th>
-                <th scope="col">Configuration</th>
-                <th scope="col">Pipeline Gas Inlets O2</th>
-                <th scope="col">Pipeline Gas Inlets N2O</th>
-                <th scope="col">Pipeline Gas Inlets Air</th>
-                <th scope="col">Gas Cylinder Yokes O2</th>
-                <th scope="col">Gas Cylinder Yokes N2O</th>
-                <th scope="col">Gas Cylinder Yokes Air</th>
-                <th scope="col">Vaporizers Desflurane</th>
-                <th scope="col">Vaporizers Enflurane</th>
-                <th scope="col">Vaporizers Halothane</th>
-                <th scope="col">Vaporizers Isoflurane</th>
-                <th scope="col">Vaporizers Sevoflurane</th>
-                <th scope="col">Type</th>
-                <th scope="col">Electronically Controlled</th>
-                <th scope="col">Interlock</th>
-                <th scope="col">O2 Fail Safe</th>
+                <th rowspan="2">Manufacturer</th>
+                <th rowspan="2">Where Marketed</th>
+                <th rowspan="2">FDA Clearance</th>
+                <th rowspan="2">Configuration</th>
+                <th colspan="3">Pipeline Gas Inlets</th>
+                <th colspan="3">Gas Cylinder Yokes </th>
+                <th rowspan="2">Vaporizers  Desflurane</th>
+                <th rowspan="2">Vaporizers  Enflurane</th>
+                <th rowspan="2">Vaporizers  Halothane</th>
+                <th rowspan="2">Vaporizers  Isoflurane</th>
+                <th rowspan="2">Vaporizers  Sevoflurane</th>
+                <th rowspan="2">Type</th>
+                <th rowspan="2">Electronically Controlled</th>
+                <th rowspan="2">Interlock</th>
+                <th rowspan="2">O2 Fail Safe</th>
+                <th rowspan="2">Hypoxic Fail Safe</th>
+                <th rowspan="2">Automatic Ventilator</th>
+                <th rowspan="2">Ventilation Manual spontaneous</th> 
+                <th rowspan="2">Ventilation VCV</th>
+                <th rowspan="2">Ventilation SIMV</th>
+                <th rowspan="2">Ventilation Advanced Modes</th>
+                <th rowspan="2">Range CC</th>
+                <th rowspan="2">CC</th>
+                <th rowspan="2">Range (L/m)</th>
+                <th colspan="2">Frequency, BPM</th>
+                <th colspan="2">Inspiratory Flow </th>
 
-                <th scope="col">Hypoxic Mixture Fail Safe</th>
-                <th scope="col">Automatic Ventilator</th>
-                <th scope="col">VM Manual spontaneous</th> 
-                <th scope="col">VM VCV</th>
-                <th scope="col">VM SIMV</th>
-                <th scope="col">VM AdvancedModes</th>
-                <th scope="col">Range CC</th>
-                <th scope="col">CC</th>
-                <th scope="col">Range (L/m)</th>
-                <th scope="col">bpmH</th>
-                <th scope="col">bpmL</th>
-                <th scope="col">Inspiratory FlowH</th>
-                <th scope="col">Inspiratory FlowL</th>
-                <th scope="col">Inspiratory Pause</th>
-                <th scope="col">Pressure limit</th>
-                <th scope="col">PEEP</th>
-                <th scope="col">Other Controls</th>
-                <th scope="col">System Checks</th>
-                <th scope="col">Scavenging System</th>
-                
+                <th rowspan="2">Inspiratory Pause (%)</th>
+                <th rowspan="2">Pressure limit</th>
+                <th rowspan="2">PEEP</th>
+                <th rowspan="2">Other Controls</th>
+                <th rowspan="2">System Checks</th>
+                <th rowspan="2">Scavenging System</th>             
                 {{-- //AAUNIT --}}
-                <th scope="col">Airway Pressure</th>
-                <th scope="col">Where Measured</th>
-                <th scope="col">High Pressure</th>
-                <th scope="col">Subatmospheric Pressure</th>
-                <th scope="col">Continuing Pressure</th>
-                <th scope="col">Low Pressure</th>
-                <th scope="col">Other Pressure Alarms</th>
-                <th scope="col">Expiratory Volume</th>
-                <th scope="col">Reverse Flow</th>
-                <th scope="col">High low Minute Volume</th>
-                <th scope="col">High low Flow</th>
-                <th scope="col">Other Expiratory Alarms</th> 
-                <th scope="col">O2 Concentration</th>
-                <th scope="col">N2O</th>
-                <th scope="col">Agent Monitors</th>
-                <th scope="col">Type Agents</th>
-                <th scope="col">Response Time</th>
-                <th scope="col">Auto ID</th>
-                <th scope="col">Agent Concentration</th>
-                <th scope="col">Other Monitors</th>
-                <th scope="col">Other Features</th>
+                <th rowspan="2">Airway Pressure</th>
+                <th rowspan="2">Where Measured</th>
+                <th rowspan="2">High Pressure</th>
+                <th rowspan="2">Subatmospheric Pressure</th>
+                <th rowspan="2">Continuing Pressure</th>
+                <th rowspan="2">Low Pressure</th>
+                <th rowspan="2">Other Pressure Alarms</th>
+                <th rowspan="2">Expiratory Volume</th>
+                <th rowspan="2">Reverse Flow</th>
+                <th rowspan="2">High low Minute Volume</th>
+                <th rowspan="2">High low Flow</th>
+                <th rowspan="2">Other Expiratory Alarms</th> 
+                <th rowspan="2">O2 Concentration</th>
+                <th rowspan="2">N2O</th>
+                <th rowspan="2">Agent Monitors</th>
+                <th rowspan="2">Type Agents</th>
+                <th rowspan="2">Response Time</th>
+                <th rowspan="2">Auto ID</th>
+                <th rowspan="2">Agent Concentration</th>
+                <th rowspan="2">Other Monitors</th>
+                <th rowspan="2">Other Features</th>
                 {{-- //DISPLAYS --}}
-                <th scope="col">Number</th>
-                <th scope="col">Type D</th>
-                <th scope="col">Integrated PM</th>
-                <th scope="col">Interface PM</th>
-                <th scope="col">User Interface</th>
-                <th scope="col">Prioritized Alarms</th>
+                <th rowspan="2">Number</th>
+                <th rowspan="2">Type D</th>
+                <th rowspan="2">Integrated PM</th>
+                <th rowspan="2">Interface PM</th>
+                <th rowspan="2">User Interface</th>
+                <th rowspan="2">Prioritized Alarms</th>
                 {{-- //DIMENSIONS --}}
-                <th scope="col">HxWxD</th>
-                <th scope="col">Weight</th>
-                <th scope="col">Shelves</th>
-                <th scope="col">Drawers</th>
-                <th scope="col">Central Brake</th>
-                <th scope="col">Power VAC</th>
-                <th scope="col">Auxiliary Outlets</th>
-                <th scope="col">Backup Battery</th>
+                <th rowspan="2">HxWxD</th>
+                <th rowspan="2">Weight</th>
+                <th rowspan="2">Shelves</th>
+                <th rowspan="2">Drawers</th>
+                <th rowspan="2">Central Brake</th>
+                <th rowspan="2">Power VAC</th>
+                <th rowspan="2">Auxiliary Outlets</th>
+                <th rowspan="2">Backup Battery</th>
                 {{-- //PURCHASE INFORMATION\ --}}
-                <th scope="col">Warranty</th>
-                <th scope="col">Service Contract</th>
-                <th scope="col">Delivery Time</th>
-                <th scope="col">Other Specifications</th>
-                <th scope="col">SCORE</th>
-
+                <th rowspan="2">Warranty</th>
+                <th rowspan="2">Service Contract</th>
+                <th rowspan="2">Delivery Time</th>
+                <th rowspan="2">Other Specifications</th>
+                <th rowspan="2">SCORE</th>
+              </tr>
+              <tr>
+                <th scope="col">O2</th>
+                <th scope="col">N2O</th>
+                <th scope="col">Air</th>
+                <th scope="col">O2</th>
+                <th scope="col">N2O</th>
+                <th scope="col">Air</th>
+                <th scope="col">Max</th>
+                <th scope="col">Min</th>
+                <th scope="col">Max</th>
+                <th scope="col">Min</th>
               </tr>
             </thead>
-            <style>
+              <style>
                 .fuera {background-color : #e06464 !important; }
               </style>
               <tbody>
+               @foreach ($anesthesiaunits as $anesthesiaunit)
+              <tr>
+                  <td>{{$anesthesiaunit->Manufacturer}}</td>
+                  <td>{{$anesthesiaunit->WhereMarketed}}</td>
+                  <td>{{$anesthesiaunit->FDAClearance}}</td>
+                  <td>{{$anesthesiaunit->Configuration}}</td>
+                  <td>{{$anesthesiaunit->PipelineGasInletsO2}}</td>
+                  <td>{{$anesthesiaunit->PipelineGasInletsN2O}}</td>
+                  <td>{{$anesthesiaunit->PipelineGasInletsAir}}</td>
+                  <td>{{$anesthesiaunit->GasCylinderYokesO2}}</td>
+                  <td>{{$anesthesiaunit->GasCylinderYokesN2O}}</td>
+                  <td>{{$anesthesiaunit->GasCylinderYokesAir}}</td>
+                  <td>{{$anesthesiaunit->VaporizersDesflurane}}</td>
+                  <td>{{$anesthesiaunit->VaporizersEnflurane}}</td>
+                  <td>{{$anesthesiaunit->VaporizersHalothane}}</td>
+                  <td>{{$anesthesiaunit->VaporizersIsoflurane}}</td>
+                  <td>{{$anesthesiaunit->VaporizersSevoflurane}}</td>
+                  <td>{{$anesthesiaunit->Type}}</td>
+                  <td>{{$anesthesiaunit->ElectronicallyControlled}}</td>
+                  <td>{{$anesthesiaunit->Interlock}}</td>
+                  <td>{{$anesthesiaunit->O2FailSafe}}</td>
+                  <td>{{$anesthesiaunit->HypoxicMixtureFailSafe}}</td>
+                  <td>{{$anesthesiaunit->AutomaticVentilator}}</td>
+                  <td>{{$anesthesiaunit->VM_Manual_spontaneous}}</td>
+                  <td>{{$anesthesiaunit->VM_VCV}}</td>
+                  <td>{{$anesthesiaunit->VM_SIMV}}</td>
+                  <td>{{$anesthesiaunit->VM_AdvancedModes}}</td>
+                  <td>{{$anesthesiaunit->RangeCC}}</td>
+                  <td>{{$anesthesiaunit->CC}}</td>
+                  <td>{{$anesthesiaunit->bpmH}}</td>
+                  <td>{{$anesthesiaunit->bpmL}}</td>
+                  <td>{{$anesthesiaunit->InspiratoryFlowH}}</td>
+                  <td>{{$anesthesiaunit->InspiratoryFlowL}}</td>
+                  <td>{{$anesthesiaunit->InspiratoryPause}}</td>
+                  <td>{{$anesthesiaunit->Pressurelimit}}</td>
+                  <td>{{$anesthesiaunit->PEEP}}</td>
+                  <td>{{$anesthesiaunit->OtherControls}}</td>
+                  <td>{{$anesthesiaunit->SystemChecks}}</td>
+                  <td>{{$anesthesiaunit->ScavengingSystem}}</td>
+            @endforeach
+            @foreach ($aanesthesiaunits as $anesthesiaunit)
+                  <td>{{$anesthesiaunit->AirwayPressure}}</td>
+                  <td>{{$anesthesiaunit->WhereMeasured}}</td>
+                  <td>{{$anesthesiaunit->HighPressure}}</td>
+                  <td>{{$anesthesiaunit->SubatmosphericPressure}}</td>
+                  <td>{{$anesthesiaunit->ContinuingPressure}}</td>
+                  <td>{{$anesthesiaunit->LowPressure}}</td>
+                  <td>{{$anesthesiaunit->OtherPressureAlarms}}</td>
+                  <td>{{$anesthesiaunit->ExpiratoryVolume}}</td>
+                  <td>{{$anesthesiaunit->ReverseFlow}}</td>
+                  <td>{{$anesthesiaunit->High_lowMinuteVolume}}</td>
+                  <td>{{$anesthesiaunit->High_lowFlow}}</td>
+                  <td>{{$anesthesiaunit->OtherExpiratoryAlarms}}</td>
+                  <td>{{$anesthesiaunit->O2Concentration}}</td>
+                  <td>{{$anesthesiaunit->N2O}}</td>
+                  <td>{{$anesthesiaunit->AgentMonitors}}</td>
+                  <td>{{$anesthesiaunit->TypeAgents}}</td>
+                  <td>{{$anesthesiaunit->ResponseTime}}</td>
+                  <td>{{$anesthesiaunit->AutoID}}</td>
+                  <td>{{$anesthesiaunit->AgentConcentration}}</td>
+                  <td>{{$anesthesiaunit->OtherMonitors}}</td>
+                  <td>{{$anesthesiaunit->OtherFeatures}}</td>
+                  {{-- DISPLAYS --}}
+                  <td>{{$anesthesiaunit->Number}}</td>
+                  <td>{{$anesthesiaunit->TypeD}}</td>
+                  <td>{{$anesthesiaunit->IntegratedPM}}</td>
+                  <td>{{$anesthesiaunit->InterfacePM}}</td>
+                  <td>{{$anesthesiaunit->UserInterface}}</td>
+                  <td>{{$anesthesiaunit->PrioritizedAlarms}}</td>
+                  <td>{{$anesthesiaunit->HxWxD}}</td>
+                  <td>{{$anesthesiaunit->Weight}}</td>
+                  <td>{{$anesthesiaunit->Shelves}}</td>
+                  <td>{{$anesthesiaunit->Drawers}}</td>
+                  <td>{{$anesthesiaunit->CentralBrake}}</td>
+                  <td>{{$anesthesiaunit->PowerVAC}}</td>
+                  <td>{{$anesthesiaunit->BackupBattery}}</td>
+                  <td>{{$anesthesiaunit->UsePerCharge}}</td>
+                  {{-- PURCHASE INFORMATION --}}
+                  <td>{{$anesthesiaunit->Warranty}}</td>
+                  <td>{{$anesthesiaunit->ServiceContract}}</td>
+                  <td>{{$anesthesiaunit->DeliveryTime}}</td>
+                  <td>{{$anesthesiaunit->OtherSpecifications}}</td>
+                  <td>{{$anesthesiaunit->SCORE}}</td>
+              </tr>
+            @endforeach
+          </tbody>
                 {{-- @foreach ($controles as $control)
                 <tr>
                     <th scope="row">{{$control->created_at }}</th>

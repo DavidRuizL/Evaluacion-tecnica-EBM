@@ -14,7 +14,8 @@ class AAnesthesiaUnitController extends Controller
     public function index()
     {
         $AAUnit=  \App\Models\AAnesthesiaUnit::all();
-        return view('aunit.index')->with('aanesthesiaunits', $AAUnit);
+        $AUnit=  \App\Models\AnesthesiaUnit::all();
+        return view('aunit.index', ['anesthesiaunits'=> $AUnit, 'aanesthesiaunits'=>$AAUnit]);
     }
 
     /**

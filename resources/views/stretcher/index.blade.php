@@ -23,53 +23,98 @@
           <table border="1" class="table table-hover table-ligth  table-bordered table-stripe">
             <thead class="table-secondary">
               <tr>
-                <th scope="col">Manufacturer</th>
-                <th scope="col">Where Marketed</th>
-                <th scope="col">Stretcher Type</th>
-                <th scope="col">Position Control</th>
-                <th scope="col">Trendelenburg</th>
-                <th scope="col">Reverse Trendelenburg</th>
+                <th rowspan="2">Manufacturer</th>
+                <th rowspan="2">Where Marketed</th>
+                <th rowspan="2">Stretcher Type</th>
+                <th rowspan="2">Position Control</th>
+                <th rowspan="2">Trendelenburg</th>
+                <th rowspan="2">Reverse Trendelenburg</th>
 
-                <th scope="col">Fowler</th>
-                <th scope="col">LegLift</th>
-                <th scope="col">KneeFlex</th>
-                <th scope="col">Siderails</th>
-                <th scope="col">Radiolucent Top</th>
+                <th rowspan="2">Fowler</th>
+                <th rowspan="2">Leg Lift</th>
+                <th rowspan="2">Knee Flex</th>
+                <th rowspan="2">Siderails</th>
+                <th rowspan="2">Radiolucent Top</th>
 
-                <th scope="col">Oxygen Tank Holder</th>
-                <th scope="col">Utility Shelf</th>
-                <th scope="col">Restraining Straps</th>
-                <th scope="col">Bumpers</th>
-                <th scope="col">Sockets</th>
-                <th scope="col">Diameter</th>
-                <th scope="col">Brakes</th>
-                <th scope="col">Frame Material</th>
-                <th scope="col">Patient Platform</th>
-                <th scope="col">Mattress Surface Type</th>
-                <th scope="col">Maximum Patient Weight</th> 
-                <th scope="col">Optional Accessories</th>
-                <th scope="col">StretcherL</th>
-                <th scope="col">StretcherW</th>
-                <th scope="col">StretcherHeightL</th>
-                <th scope="col">StretcherHeightH</th>
-                <th scope="col">MattressL</th>
-                <th scope="col">MattressW</th>
-                <th scope="col">Mattress Thickness</th>
-                <th scope="col">Mattress Weight</th>
-                <th scope="col">Stretcher Warranty</th>
-                <th scope="col">Mattress Warranty</th>
-                <th scope="col">Hydraulic Pump</th>
-                <th scope="col">Delivery Time</th>
-                <th scope="col">Other Specifications</th>
-                <th scope="col">UMDNS Code</th>
-                <th scope="col">SCORE</th>
-
+                <th rowspan="2">Oxygen Tank Holder</th>
+                <th rowspan="2">Utility Shelf</th>
+                <th rowspan="2">Restraining Straps</th>
+                <th rowspan="2">Bumpers</th>
+                <th rowspan="2">Sockets</th>
+                <th rowspan="2">Diameter</th>
+                <th rowspan="2">Brakes</th>
+                <th rowspan="2">Frame Material</th>
+                <th rowspan="2">Patient Platform</th>
+                <th rowspan="2">Mattress Surface Type</th>
+                <th rowspan="2">Maximum Patient Weight</th> 
+                <th rowspan="2">Optional Accessories</th>
+                <th colspan="2">Stretcher </th>
+                <th colspan="2">Height</th>
+                <th colspan="2">Mattress </th>
+                <th  rowspan="2">Mattress Thickness</th>
+                <th  rowspan="2">Mattress Weight</th>
+                <th  rowspan="2">Stretcher Warranty</th>
+                <th  rowspan="2">Mattress Warranty</th>
+                <th  rowspan="2">Hydraulic Pump</th>
+                <th  rowspan="2">Delivery Time</th>
+                <th  rowspan="2">Other Specifications</th>
+                <th  rowspan="2">UMDNS Code</th>
+                <th  rowspan="2">SCORE</th>
               </tr>
+              <tr>
+                 <th scope="col">Length</th>
+                 <th scope="col">Width</th>
+                 <th scope="col">Min</th>
+                 <th scope="col">Max</th>
+                 <th scope="col">Length</th>
+                 <th scope="col">Width</th>
             </thead>
             <style>
                 .fuera {background-color : #e06464 !important; }
               </style>
               <tbody>
+                   @foreach ($stretchers as $stretcher)
+              <tr>
+                  <td>{{$stretcher->Manufacturer}}</td>
+                  <td>{{$stretcher->WhereMarketed}}</td>
+                  <td>{{$stretcher->StretcherType}}</td>
+                  <td>{{$stretcher->PositionControl}}</td>
+                  <td>{{$stretcher->Trendelenburg}}</td>
+                  <td>{{$stretcher->ReverseTrendelenburg}}</td>
+                  <td>{{$stretcher->Fowler}}</td>
+                  <td>{{$stretcher->LegLift}}</td>
+                  <td>{{$stretcher->KneeFlex}}</td>
+                  <td>{{$stretcher->Siderails}}</td>
+                  <td>{{$stretcher->RadiolucentTop}}</td>
+                  <td>{{$stretcher->OxygenTankHolder}}</td>
+                  <td>{{$stretcher->UtilityShelf}}</td>
+                  <td>{{$stretcher->RestrainingStraps}}</td>
+                  <td>{{$stretcher->Bumpers}}</td>
+                  <td>{{$stretcher->Sockets}}</td>
+                  <td>{{$stretcher->Diameter}}</td>
+                  <td>{{$stretcher->Brakes}}</td>
+                  <td>{{$stretcher->FrameMaterial}}</td>
+                  <td>{{$stretcher->PatientPlatform}}</td>
+                  <td>{{$stretcher->MattressSurfaceType}}</td>
+                  <td>{{$stretcher->MaximumPatientWeight}}</td>
+                  <td>{{$stretcher->OptionalAccessories}}</td>
+                  <td>{{$stretcher->StretcherL}}</td>
+                  <td>{{$stretcher->StretcherW}}</td>
+                  <td>{{$stretcher->StretcherHeightL}}</td>
+                  <td>{{$stretcher->StretcherHeightH}}</td>
+                  <td>{{$stretcher->MattressL}}</td>
+                  <td>{{$stretcher->MattressW}}</td>
+                  <td>{{$stretcher->MattressThickness}}</td>
+                  <td>{{$stretcher->MattressWeight}}</td>
+                  <td>{{$stretcher->StretcherWarranty}}</td>
+                  <td>{{$stretcher->MattressWarranty}}</td>
+                  <td>{{$stretcher->HydraulicPump}}</td>
+                  <td>{{$stretcher->DeliveryTime}}</td>
+                  <td>{{$stretcher->OtherSpecifications}}</td>
+                  <td>{{$stretcher->UMDNSCode}}</td>
+              </tr>
+            @endforeach
+          </tbody>
                 {{-- @foreach ($controles as $control)
                 <tr>
                     <th scope="row">{{$control->created_at }}</th>
