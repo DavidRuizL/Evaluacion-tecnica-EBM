@@ -8,8 +8,8 @@
       table, th, td {
         padding: 5px;
         text-align:center;
-        table-layout: fixed;      
         width: 130px;
+        table-layout: fixed;      
         border: 1px solid;
         border-collapse: collapse;
       }
@@ -27,18 +27,18 @@
                 <th rowspan="2">Where Marketed</th>
                 <th rowspan="2">FDA Clearance</th>
                 <th rowspan="2">Configuration</th>
-                <th colspan="3">Pipeline Gas Inlets</th>
-                <th colspan="3">Gas Cylinder Yokes </th>
-                <th rowspan="2">Vaporizers  Desflurane</th>
-                <th rowspan="2">Vaporizers  Enflurane</th>
-                <th rowspan="2">Vaporizers  Halothane</th>
-                <th rowspan="2">Vaporizers  Isoflurane</th>
-                <th rowspan="2">Vaporizers  Sevoflurane</th>
+                <th colspan="3">Gas Inlets</th>
+                <th colspan="3">Cylinder Yokes </th>
+                <th rowspan="2">Vaporizers Desflurane</th>
+                <th rowspan="2">Vaporizers Enflurane</th>
+                <th rowspan="2">Vaporizers Halothane</th>
+                <th rowspan="2">Vaporizers Isoflurane</th>
+                <th rowspan="2">Vaporizers Sevoflurane</th>
                 <th rowspan="2">Type</th>
                 <th rowspan="2">Electronically Controlled</th>
                 <th rowspan="2">Interlock</th>
-                <th rowspan="2">O2 Fail Safe</th>
-                <th rowspan="2">Hypoxic Fail Safe</th>
+                <th rowspan="2">O2 Fail_Safe</th>
+                <th rowspan="2">Hypoxic Fail_Safe</th>
                 <th rowspan="2">Automatic Ventilator</th>
                 <th rowspan="2">Ventilation Manual spontaneous</th> 
                 <th rowspan="2">Ventilation VCV</th>
@@ -47,8 +47,8 @@
                 <th rowspan="2">Range CC</th>
                 <th rowspan="2">CC</th>
                 <th rowspan="2">Range (L/m)</th>
-                <th colspan="2">Frequency, BPM</th>
-                <th colspan="2">Inspiratory Flow </th>
+                <th colspan="2">BPM</th>
+                <th colspan="2">InspiratoryFlow </th>
 
                 <th rowspan="2">Inspiratory Pause (%)</th>
                 <th rowspan="2">Pressure limit</th>
@@ -66,8 +66,8 @@
                 <th rowspan="2">Other Pressure Alarms</th>
                 <th rowspan="2">Expiratory Volume</th>
                 <th rowspan="2">Reverse Flow</th>
-                <th rowspan="2">High low Minute Volume</th>
-                <th rowspan="2">High low Flow</th>
+                <th rowspan="2">High/low Minute Volume</th>
+                <th rowspan="2">High/low Flow</th>
                 <th rowspan="2">Other Expiratory Alarms</th> 
                 <th rowspan="2">O2 Concentration</th>
                 <th rowspan="2">N2O</th>
@@ -80,7 +80,7 @@
                 <th rowspan="2">Other Features</th>
                 {{-- //DISPLAYS --}}
                 <th rowspan="2">Number</th>
-                <th rowspan="2">Type D</th>
+                <th rowspan="2">Type Display</th>
                 <th rowspan="2">Integrated PM</th>
                 <th rowspan="2">Interface PM</th>
                 <th rowspan="2">User Interface</th>
