@@ -15,6 +15,10 @@
       }
 
       </style>
+      <style>
+        .fuera {background-color : #e06464 !important; }
+      </style>
+      @php($scoreList = [ ])
       <br><br>
       
       <div class="container" >
@@ -69,11 +73,13 @@
                 <th rowspan="2">High/low Minute Volume</th>
                 <th rowspan="2">High/low Flow</th>
                 <th rowspan="2">Other Expiratory Alarms</th> 
+                          
                 <th rowspan="2">O2 Concentration</th>
+                <th rowspan="2">Response Time</th>      
                 <th rowspan="2">N2O</th>
                 <th rowspan="2">Agent Monitors</th>
-                <th rowspan="2">Type Agents</th>
-                <th rowspan="2">Response Time</th>
+                {{-- <th rowspan="2">Type Agents</th> --}}
+
                 <th rowspan="2">Auto ID</th>
                 <th rowspan="2">Agent Concentration</th>
                 <th rowspan="2">Other Monitors</th>
@@ -94,6 +100,7 @@
                 <th rowspan="2">Power VAC</th>
                 <th rowspan="2">Auxiliary Outlets</th>
                 <th rowspan="2">Backup Battery</th>
+                <th rowspan="2">Use per Charge</th>
                 {{-- //PURCHASE INFORMATION\ --}}
                 <th rowspan="2">Warranty</th>
                 <th rowspan="2">Service Contract</th>
@@ -102,221 +109,482 @@
                 <th rowspan="2">SCORE</th>
               </tr>
               <tr>
-                <th scope="col">O2</th>
-                <th scope="col">N2O</th>
-                <th scope="col">Air</th>
-                <th scope="col">O2</th>
-                <th scope="col">N2O</th>
-                <th scope="col">Air</th>
-                <th scope="col">Max</th>
-                <th scope="col">Min</th>
-                <th scope="col">Max</th>
-                <th scope="col">Min</th>
+              <th scope="col">O2</th>
+              <th scope="col">N2O</th>
+              <th scope="col">AIR</th>
+              <th scope="col">O2</th>
+              <th scope="col">N2O</th>
+              <th scope="col">AIR</th>  
               </tr>
             </thead>
-              <style>
-                .fuera {background-color : #e06464 !important; }
-              </style>
               <tbody>
-               @foreach ($anesthesiaunits as $anesthesiaunit)
-              <tr>
-                  <td>{{$anesthesiaunit->Manufacturer}}</td>
-                  <td>{{$anesthesiaunit->WhereMarketed}}</td>
-                  <td>{{$anesthesiaunit->FDAClearance}}</td>
-                  <td>{{$anesthesiaunit->Configuration}}</td>
-                  <td>{{$anesthesiaunit->PipelineGasInletsO2}}</td>
-                  <td>{{$anesthesiaunit->PipelineGasInletsN2O}}</td>
-                  <td>{{$anesthesiaunit->PipelineGasInletsAir}}</td>
-                  <td>{{$anesthesiaunit->GasCylinderYokesO2}}</td>
-                  <td>{{$anesthesiaunit->GasCylinderYokesN2O}}</td>
-                  <td>{{$anesthesiaunit->GasCylinderYokesAir}}</td>
-                  <td>{{$anesthesiaunit->VaporizersDesflurane}}</td>
-                  <td>{{$anesthesiaunit->VaporizersEnflurane}}</td>
-                  <td>{{$anesthesiaunit->VaporizersHalothane}}</td>
-                  <td>{{$anesthesiaunit->VaporizersIsoflurane}}</td>
-                  <td>{{$anesthesiaunit->VaporizersSevoflurane}}</td>
-                  <td>{{$anesthesiaunit->Type}}</td>
-                  <td>{{$anesthesiaunit->ElectronicallyControlled}}</td>
-                  <td>{{$anesthesiaunit->Interlock}}</td>
-                  <td>{{$anesthesiaunit->O2FailSafe}}</td>
-                  <td>{{$anesthesiaunit->HypoxicMixtureFailSafe}}</td>
-                  <td>{{$anesthesiaunit->AutomaticVentilator}}</td>
-                  <td>{{$anesthesiaunit->VM_Manual_spontaneous}}</td>
-                  <td>{{$anesthesiaunit->VM_VCV}}</td>
-                  <td>{{$anesthesiaunit->VM_SIMV}}</td>
-                  <td>{{$anesthesiaunit->VM_AdvancedModes}}</td>
-                  <td>{{$anesthesiaunit->RangeCC}}</td>
-                  <td>{{$anesthesiaunit->CC}}</td>
-                  <td>{{$anesthesiaunit->bpmH}}</td>
-                  <td>{{$anesthesiaunit->bpmL}}</td>
-                  <td>{{$anesthesiaunit->InspiratoryFlowH}}</td>
-                  <td>{{$anesthesiaunit->InspiratoryFlowL}}</td>
-                  <td>{{$anesthesiaunit->InspiratoryPause}}</td>
-                  <td>{{$anesthesiaunit->Pressurelimit}}</td>
-                  <td>{{$anesthesiaunit->PEEP}}</td>
-                  <td>{{$anesthesiaunit->OtherControls}}</td>
-                  <td>{{$anesthesiaunit->SystemChecks}}</td>
-                  <td>{{$anesthesiaunit->ScavengingSystem}}</td>
+                @for ($i =1; $i <=1; $i++)
+               {{-- @foreach ($anesthesiaunits as $anesthesiaunit)
+                  @if(($anesthesiaunit->id ==3) OR ($anesthesiaunit->id ==4))
+                  @else        --}}
+                    @php($score=0)
+                    <tr>
+                        <td>{{$anesthesiaunits[$i]->Manufacturer}}</td>
+                        <td>{{$anesthesiaunits[$i]->WhereMarketed}}</td>
+
+                        @if(((($anesthesiaunits[$i]->FDAClearance) !=NULL) AND (($anesthesiaunits[$i]->FDAClearance) !='NO') ) OR (($anesthesiaunits[1]->FDAClearance) ==NULL ) )
+                          <td>{{$anesthesiaunits[$i]->FDAClearance}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->FDAClearance}}</td>
+                        @endif                               
+
+                        <td>{{$aanesthesiaunits[$i]->Configuration}}</td>
+
+                        @if(((($anesthesiaunits[$i]->PipelineGasInletsO2) !=NULL) AND (($anesthesiaunits[$i]->PipelineGasInletsO2) !='NO') ) OR (($anesthesiaunits[1]->PipelineGasInletsO2) ==NULL ) )
+                        <td>{{$anesthesiaunits[$i]->PipelineGasInletsO2}}</td>
+                        @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->PipelineGasInletsO2}}</td>
+                        @endif    
+                        
+                        @if(((($anesthesiaunits[$i]->PipelineGasInletsN2O) !=NULL) AND (($anesthesiaunits[$i]->PipelineGasInletsN2O) !='NO') ) OR (($anesthesiaunits[1]->PipelineGasInletsN2O) ==NULL ) )
+                          <td>{{$anesthesiaunits[$i]->PipelineGasInletsN2O}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->PipelineGasInletsN2O}}</td>
+                        @endif    
+
+                        @if(((($anesthesiaunits[$i]->PipelineGasInletsAir) !=NULL) AND (($anesthesiaunits[$i]->PipelineGasInletsAir) !='NO') ) OR (($anesthesiaunits[1]->PipelineGasInletsAir) ==NULL ) )
+                        <td>{{$anesthesiaunits[$i]->PipelineGasInletsAir}}</td>
+                        @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->PipelineGasInletsAir}}</td>
+                        @endif                            
+
+                        @if(((($anesthesiaunits[$i]->GasCylinderYokesO2) !=NULL) AND (($anesthesiaunits[$i]->GasCylinderYokesO2) !='NO') ) OR (($anesthesiaunits[1]->GasCylinderYokesO2) ==NULL ) )
+                          <td>{{$anesthesiaunits[$i]->GasCylinderYokesO2}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->GasCylinderYokesO2}}</td>
+                        @endif       
+
+                        @if(((($anesthesiaunits[$i]->GasCylinderYokesN2O) !=NULL) AND (($anesthesiaunits[$i]->GasCylinderYokesN2O) !='NO') ) OR (($anesthesiaunits[1]->GasCylinderYokesN2O) ==NULL ) )
+                          <td>{{$anesthesiaunits[$i]->GasCylinderYokesN2O}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunit->GasCylinderYokesN2O}}</td>
+                        @endif         
+
+                        @if(((($anesthesiaunits[$i]->GasCylinderYokesAir) !=NULL) AND (($anesthesiaunits[$i]->GasCylinderYokesAir) !='NO') ) OR (($anesthesiaunits[1]->GasCylinderYokesAir) ==NULL ) )
+                          <td>{{$anesthesiaunits[$i]->GasCylinderYokesAir}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->GasCylinderYokesAir}}</td>
+                        @endif                              
+
+                        @if(((($anesthesiaunits[$i]->VaporizersDesflurane) !=NULL) AND (($anesthesiaunits[$i]->VaporizersDesflurane) !='NO') ) OR (($anesthesiaunits[1]->VaporizersDesflurane) ==NULL ) )
+                          <td>{{$anesthesiaunits[$i]->VaporizersDesflurane}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->VaporizersDesflurane}}</td>
+                        @endif       
+
+                        @if(((($anesthesiaunits[$i]->VaporizersEnflurane) !=NULL) AND (($anesthesiaunits[$i]->VaporizersEnflurane) !='NO') ) OR (($anesthesiaunits[1]->VaporizersEnflurane) ==NULL ) )
+                          <td>{{$anesthesiaunits[$i]->VaporizersEnflurane}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->VaporizersEnflurane}}</td>
+                        @endif      
+
+                        @if(((($anesthesiaunits[$i]->VaporizersHalothane) !=NULL) AND (($anesthesiaunits[$i]->VaporizersHalothane) !='NO') ) OR (($anesthesiaunits[1]->VaporizersHalothane) ==NULL ) )
+                          <td>{{$anesthesiaunits[$i]->VaporizersHalothane}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->VaporizersHalothane}}</td>
+                        @endif                             
+
+                        @if(((($anesthesiaunits[$i]->VaporizersIsoflurane) !=NULL) AND (($anesthesiaunits[$i]->VaporizersIsoflurane) !='NO') ) OR (($anesthesiaunits[1]->VaporizersIsoflurane) ==NULL ) )
+                          <td>{{$anesthesiaunits[$i]->VaporizersIsoflurane}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->VaporizersIsoflurane}}</td>
+                        @endif                                  
+
+                        @if(((($anesthesiaunits[$i]->VaporizersSevoflurane) !=NULL) AND (($anesthesiaunits[$i]->VaporizersSevoflurane) !='NO') ) OR (($anesthesiaunits[1]->VaporizersSevoflurane) ==NULL ) )
+                          <td>{{$anesthesiaunits[$i]->VaporizersSevoflurane}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->VaporizersSevoflurane}}</td>
+                        @endif                                         
+                     
+                        <td>{{$anesthesiaunits[$i]->Type}}</td>
+
+                        @if(((($anesthesiaunits[$i]->ElectronicallyControlled) !=NULL) AND (($anesthesiaunits[$i]->ElectronicallyControlled) !='NO') ) OR (($anesthesiaunits[1]->ElectronicallyControlled) ==NULL ) )
+                          <td>{{$anesthesiaunits[$i]->ElectronicallyControlled}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->ElectronicallyControlled}}</td>
+                        @endif      
+
+                        @if(((($anesthesiaunits[$i]->Interlock) !=NULL) AND (($anesthesiaunits[$i]->Interlock) !='NO') ) OR (($anesthesiaunits[1]->Interlock) ==NULL ) )
+                          <td>{{$anesthesiaunits[$i]->Interlock}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->Interlock}}</td>
+                        @endif      
+
+                        @if(((($anesthesiaunits[$i]->O2FailSafe) !=NULL) AND (($anesthesiaunits[$i]->O2FailSafe) !='NO') ) OR (($anesthesiaunits[1]->O2FailSafe) ==NULL ) )
+                          <td>{{$anesthesiaunits[$i]->O2FailSafe}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->O2FailSafe}}</td>
+                        @endif      
+
+                        @if(((($anesthesiaunits[$i]->HypoxicMixtureFailSafe) !=NULL) AND (($anesthesiaunits[$i]->HypoxicMixtureFailSafe) !='NO') ) OR (($anesthesiaunits[1]->HypoxicMixtureFailSafe) ==NULL ) )
+                          <td>{{$anesthesiaunits[$i]->HypoxicMixtureFailSafe}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->HypoxicMixtureFailSafe}}</td>
+                        @endif  
+
+                        @if(((($anesthesiaunits[$i]->AutomaticVentilator) !=NULL) AND (($anesthesiaunits[$i]->AutomaticVentilator) !='NO') ) OR (($anesthesiaunits[1]->AutomaticVentilator) ==NULL ) )
+                          <td>{{$anesthesiaunits[$i]->AutomaticVentilator}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->AutomaticVentilator}}</td>
+                        @endif  
+
+                        @if(((($anesthesiaunits[$i]->VM_Manual_spontaneous) !=NULL) AND (($anesthesiaunits[$i]->VM_Manual_spontaneous) !='NO') ) OR (($anesthesiaunits[1]->VM_Manual_spontaneous) ==NULL ) )
+                          <td>{{$anesthesiaunits[$i]->VM_Manual_spontaneous}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->VM_Manual_spontaneous}}</td>
+                        @endif  
+
+                        @if(((($anesthesiaunits[$i]->VM_VCV) !=NULL) AND (($anesthesiaunits[$i]->VM_VCV) !='NO') ) OR (($anesthesiaunits[1]->VM_VCV) ==NULL ) )
+                          <td>{{$anesthesiaunits[$i]->VM_VCV}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->VM_VCV}}</td>
+                        @endif                          
+
+                        @if(((($anesthesiaunits[$i]->VM_SIMV) !=NULL) AND (($anesthesiaunits[$i]->VM_SIMV) !='NO') ) OR (($anesthesiaunits[1]->VM_SIMV) ==NULL ) )
+                          <td>{{$anesthesiaunits[$i]->VM_SIMV}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->VM_SIMV}}</td>
+                        @endif                          
+
+                        @if(((($anesthesiaunits[$i]->VM_AdvancedModes) !=NULL) AND (($anesthesiaunits[$i]->VM_AdvancedModes) !='NO') ) OR (($anesthesiaunits[1]->VM_AdvancedModes) ==NULL ) )
+                          <td>{{$anesthesiaunits[$i]->VM_AdvancedModes}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->VM_AdvancedModes}}</td>
+                        @endif                           
+
+                        @if(($anesthesiaunits[$i]->RangeCC) <=($anesthesiaunits[1]->RangeCC)  )
+                          <td>{{$anesthesiaunits[$i]->RangeCC}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->RangeCC}}</td>
+                        @endif              
+
+                        @if(($anesthesiaunits[$i]->CC) <=($anesthesiaunits[1]->CC)  )
+                          <td>{{$anesthesiaunits[$i]->CC}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->CC}}</td>
+                        @endif    
+
+                        @if(($anesthesiaunits[$i]->RangeLm) <=($anesthesiaunits[1]->RangeLm)  )
+                          <td>{{$anesthesiaunits[$i]->RangeLm}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->RangeLm}}</td>
+                        @endif                            
+
+                        @if(($anesthesiaunits[$i]->bpmH) <=($anesthesiaunits[1]->bpmH)  )
+                          <td>{{$anesthesiaunits[$i]->bpmH}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->bpmH}}</td>
+                        @endif    
+
+                        @if(($anesthesiaunits[$i]->bpmL) <=($anesthesiaunits[1]->bpmL)  )
+                          <td>{{$anesthesiaunits[$i]->bpmL}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->bpmL}}</td>
+                        @endif    
+
+                        @if(($anesthesiaunits[$i]->InspiratoryFlowH) <=($anesthesiaunits[1]->InspiratoryFlowH)  )
+                          <td>{{$anesthesiaunits[$i]->InspiratoryFlowH}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->InspiratoryFlowH}}</td>
+                        @endif                            
+
+                        @if(($anesthesiaunits[$i]->InspiratoryFlowL) <=($anesthesiaunits[1]->InspiratoryFlowL)  )
+                          <td>{{$anesthesiaunits[$i]->InspiratoryFlowL}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->InspiratoryFlowL}}</td>
+                        @endif                                  
+
+                        @if(($anesthesiaunits[$i]->InspiratoryPause) >=($anesthesiaunits[1]->InspiratoryPause)  )
+                          <td>{{$anesthesiaunits[$i]->InspiratoryPause}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->InspiratoryPause}}</td>
+                        @endif           
+
+                        @if(($anesthesiaunits[$i]->Pressurelimit) <=($anesthesiaunits[1]->Pressurelimit)  )
+                          <td>{{$anesthesiaunits[$i]->Pressurelimit}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->Pressurelimit}}</td>
+                        @endif       
+
+                        @if(($anesthesiaunits[$i]->PEEP) <=($anesthesiaunits[1]->PEEP)  )
+                          <td>{{$anesthesiaunits[$i]->PEEP}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->PEEP}}</td>
+                        @endif       
+
+                        <td>{{$anesthesiaunits[$i]->OtherControls}}</td>
+
+                        @if(((($anesthesiaunits[$i]->SystemChecks) !=NULL) AND (($anesthesiaunits[$i]->SystemChecks) !='NO') ) OR (($anesthesiaunits[1]->SystemChecks) ==NULL ) )
+                        <td>{{$anesthesiaunits[$i]->SystemChecks}}</td>
+                        @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->SystemChecks}}</td>
+                        @endif                  
+    
+                        @if(((($anesthesiaunits[$i]->ScavengingSystem) !=NULL) AND (($anesthesiaunits[$i]->ScavengingSystem) !='NO') ) OR (($anesthesiaunits[1]->ScavengingSystem) ==NULL ) )
+                          <td>{{$anesthesiaunits[$i]->ScavengingSystem}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunits[$i]->ScavengingSystem}}</td>
+                        @endif     
+                  {{-- @endif
             @endforeach
             @foreach ($aanesthesiaunits as $anesthesiaunit)
-                  <td>{{$anesthesiaunit->AirwayPressure}}</td>
-                  <td>{{$anesthesiaunit->WhereMeasured}}</td>
-                  <td>{{$anesthesiaunit->HighPressure}}</td>
-                  <td>{{$anesthesiaunit->SubatmosphericPressure}}</td>
-                  <td>{{$anesthesiaunit->ContinuingPressure}}</td>
-                  <td>{{$anesthesiaunit->LowPressure}}</td>
-                  <td>{{$anesthesiaunit->OtherPressureAlarms}}</td>
-                  <td>{{$anesthesiaunit->ExpiratoryVolume}}</td>
-                  <td>{{$anesthesiaunit->ReverseFlow}}</td>
-                  <td>{{$anesthesiaunit->High_lowMinuteVolume}}</td>
-                  <td>{{$anesthesiaunit->High_lowFlow}}</td>
-                  <td>{{$anesthesiaunit->OtherExpiratoryAlarms}}</td>
-                  <td>{{$anesthesiaunit->O2Concentration}}</td>
-                  <td>{{$anesthesiaunit->N2O}}</td>
-                  <td>{{$anesthesiaunit->AgentMonitors}}</td>
-                  <td>{{$anesthesiaunit->TypeAgents}}</td>
-                  <td>{{$anesthesiaunit->ResponseTime}}</td>
-                  <td>{{$anesthesiaunit->AutoID}}</td>
-                  <td>{{$anesthesiaunit->AgentConcentration}}</td>
-                  <td>{{$anesthesiaunit->OtherMonitors}}</td>
-                  <td>{{$anesthesiaunit->OtherFeatures}}</td>
-                  {{-- DISPLAYS --}}
-                  <td>{{$anesthesiaunit->Number}}</td>
-                  <td>{{$anesthesiaunit->TypeD}}</td>
-                  <td>{{$anesthesiaunit->IntegratedPM}}</td>
-                  <td>{{$anesthesiaunit->InterfacePM}}</td>
-                  <td>{{$anesthesiaunit->UserInterface}}</td>
-                  <td>{{$anesthesiaunit->PrioritizedAlarms}}</td>
-                  <td>{{$anesthesiaunit->HxWxD}}</td>
-                  <td>{{$anesthesiaunit->Weight}}</td>
-                  <td>{{$anesthesiaunit->Shelves}}</td>
-                  <td>{{$anesthesiaunit->Drawers}}</td>
-                  <td>{{$anesthesiaunit->CentralBrake}}</td>
-                  <td>{{$anesthesiaunit->PowerVAC}}</td>
-                  <td>{{$anesthesiaunit->BackupBattery}}</td>
-                  <td>{{$anesthesiaunit->UsePerCharge}}</td>
-                  {{-- PURCHASE INFORMATION --}}
-                  <td>{{$anesthesiaunit->Warranty}}</td>
-                  <td>{{$anesthesiaunit->ServiceContract}}</td>
-                  <td>{{$anesthesiaunit->DeliveryTime}}</td>
-                  <td>{{$anesthesiaunit->OtherSpecifications}}</td>
-                  <td>{{$anesthesiaunit->SCORE}}</td>
+                  @if(($anesthesiaunit->id ==3) OR ($anesthesiaunit->id ==4))
+                  @else     --}}
+
+                        @if(((($aanesthesiaunits[$i]->AirwayPressure) !=NULL) AND (($aanesthesiaunits[$i]->AirwayPressure) !='NO') ) OR (($aanesthesiaunits[1]->AirwayPressure) ==NULL ) )
+                          <td>{{$aanesthesiaunits[$i]->AirwayPressure}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$aanesthesiaunits[$i]->AirwayPressure}}</td>
+                        @endif                        
+
+                      <td>{{$aanesthesiaunits[$i]->WhereMeasured}}</td>
+
+                        @if(((($aanesthesiaunits[$i]->HighPressure) !=NULL) AND (($aanesthesiaunits[$i]->HighPressure) !='NO') ) OR (($aanesthesiaunits[1]->HighPressure) ==NULL ) )
+                          <td>{{$aanesthesiaunits[$i]->HighPressure}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$aanesthesiaunits[$i]->HighPressure}}</td>
+                        @endif                                
+
+                        @if(((($aanesthesiaunits[$i]->SubatmosphericPressure) !=NULL) AND (($aanesthesiaunits[$i]->SubatmosphericPressure) !='NO') ) OR (($aanesthesiaunits[1]->SubatmosphericPressure) ==NULL ) )
+                          <td>{{$aanesthesiaunits[$i]->SubatmosphericPressure}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$aanesthesiaunits[$i]->SubatmosphericPressure}}</td>
+                        @endif   
+
+                        @if(((($aanesthesiaunits[$i]->ContinuingPressure) !=NULL) AND (($aanesthesiaunits[$i]->ContinuingPressure) !='NO') ) OR (($aanesthesiaunits[1]->ContinuingPressure) ==NULL ) )
+                          <td>{{$aanesthesiaunits[$i]->ContinuingPressure}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$aanesthesiaunits[$i]->ContinuingPressure}}</td>
+                        @endif      
+                        
+                        @if(((($aanesthesiaunits[$i]->LowPressure) !=NULL) AND (($aanesthesiaunits[$i]->LowPressure) !='NO') ) OR (($aanesthesiaunits[1]->LowPressure) ==NULL ) )
+                          <td>{{$aanesthesiaunits[$i]->LowPressure}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$aanesthesiaunits[$i]->LowPressure}}</td>
+                        @endif                           
+   
+                      <td>{{$aanesthesiaunits[$i]->OtherPressureAlarms}}</td>
+
+                        @if(((($aanesthesiaunits[$i]->ExpiratoryVolume) !=NULL) AND (($aanesthesiaunits[$i]->ExpiratoryVolume) !='NO') ) OR (($aanesthesiaunits[1]->ExpiratoryVolume) ==NULL ) )
+                          <td>{{$aanesthesiaunits[$i]->ExpiratoryVolume}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$aanesthesiaunits[$i]->ExpiratoryVolume}}</td>
+                        @endif     
+
+                        @if(((($aanesthesiaunits[$i]->ReverseFlow) !=NULL) AND (($aanesthesiaunits[$i]->ReverseFlow) !='NO') ) OR (($aanesthesiaunits[1]->ReverseFlow) ==NULL ) )
+                          <td>{{$aanesthesiaunits[$i]->ReverseFlow}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$anesthesiaunit->ReverseFlow}}</td>
+                        @endif                                
+
+                        @if(((($aanesthesiaunits[$i]->High_lowMinuteVolume) !=NULL) AND (($aanesthesiaunits[$i]->High_lowMinuteVolume) !='NO') ) OR (($aanesthesiaunits[1]->High_lowMinuteVolume) ==NULL ) )
+                          <td>{{$aanesthesiaunits[$i]->High_lowMinuteVolume}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$aanesthesiaunits[$i]->High_lowMinuteVolume}}</td>
+                        @endif                                  
+
+                        @if(((($aanesthesiaunits[$i]->High_lowFlow) !=NULL) AND (($aanesthesiaunits[$i]->High_lowFlow) !='NO') ) OR (($aanesthesiaunits[1]->High_lowFlow) ==NULL ) )
+                          <td>{{$aanesthesiaunits[$i]->High_lowFlow}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$aanesthesiaunits[$i]->High_lowFlow}}</td>
+                        @endif     
+
+                      <td>{{$aanesthesiaunits[$i]->OtherExpiratoryAlarms}}</td>
+                        
+                        @if(((($aanesthesiaunits[$i]->O2Concentration) !=NULL) AND (($aanesthesiaunits[$i]->O2Concentration) !='NO') ) OR (($aanesthesiaunits[1]->O2Concentration) ==NULL ) )
+                          <td>{{$aanesthesiaunits[$i]->O2Concentration}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$aanesthesiaunits[$i]->O2Concentration}}</td>
+                        @endif                                  
+
+                        @if(((($aanesthesiaunits[$i]->ResponseTime) !=NULL) AND (($aanesthesiaunits[$i]->ResponseTime) !='NO') ) OR (($aanesthesiaunits[1]->ResponseTime) ==NULL ) )
+                          <td>{{$aanesthesiaunits[$i]->ResponseTime}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$aanesthesiaunits[$i]->ResponseTime}}</td>
+                        @endif          
+
+                        @if(((($aanesthesiaunits[$i]->N2O) !=NULL) AND (($aanesthesiaunits[$i]->N2O) !='NO') ) OR (($aanesthesiaunits[1]->N2O) ==NULL ) )
+                          <td>{{$aanesthesiaunits[$i]->N2O}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$aanesthesiaunits[$i]->N2O}}</td>
+                        @endif                               
+
+                        @if(((($aanesthesiaunits[$i]->AgentMonitors) !=NULL) AND (($aanesthesiaunits[$i]->AgentMonitors) !='NO') ) OR (($aanesthesiaunits[1]->AgentMonitors) ==NULL ) )
+                        <td>{{$aanesthesiaunits[$i]->AgentMonitors}}</td>
+                        @php($score++)
+                        @else               
+                         <td class="fuera">{{$aanesthesiaunits[$i]->AgentMonitors}}</td>
+                        @endif                          
+
+                        {{-- @if(((($anesthesiaunit->TypeAgents) !=NULL) AND (($anesthesiaunit->TypeAgents) !='NO') ) OR (($aanesthesiaunits[1]->TypeAgents) ==NULL ) )
+                        <td>{{$anesthesiaunit->TypeAgents}}</td>
+                        @php($score++)
+                        @else               
+                         <td class="fuera">{{$anesthesiaunit->TypeAgents}}</td>
+                        @endif                             
+                      <td>{{$anesthesiaunit->TypeAgents}}</td> --}}
+
+                        @if(((($aanesthesiaunits[$i]->AutoID) !=NULL) AND (($aanesthesiaunits[$i]->AutoID) !='NO') ) OR (($aanesthesiaunits[1]->AutoID) ==NULL ) )
+                        <td>{{$aanesthesiaunits[$i]->AutoID}}</td>
+                        @php($score++)
+                        @else               
+                         <td class="fuera">{{$aanesthesiaunits[$i]->AutoID}}</td>
+                        @endif                             
+
+                        @if(((($aanesthesiaunits[$i]->AgentConcentration) !=NULL) AND (($aanesthesiaunits[$i]->AgentConcentration) !='NO') ) OR (($aanesthesiaunits[1]->AgentConcentration) ==NULL ) )
+                        <td>{{$aanesthesiaunits[$i]->AgentConcentration}}</td>
+                        @php($score++)
+                        @else               
+                         <td class="fuera">{{$aanesthesiaunits[$i]->AutoAgentConcentrationID}}</td>
+                        @endif             
+
+                      <td>{{$aanesthesiaunits[$i]->OtherMonitors}}</td>
+                      <td>{{$aanesthesiaunits[$i]->OtherFeatures}}</td>
+
+                      {{-- DISPLAYS --}}
+                        @if(($aanesthesiaunits[$i]->Number) <=($aanesthesiaunits[1]->Number)  )
+                          <td>{{$aanesthesiaunits[$i]->Number}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$aanesthesiaunits[$i]->Number}}</td>
+                        @endif       
+                      
+                      <td>{{$aanesthesiaunits[$i]->TypeD}}</td>
+
+                        @if(((($aanesthesiaunits[$i]->IntegratedPM) !=NULL) AND (($aanesthesiaunits[$i]->IntegratedPM) !='NO') ) OR (($aanesthesiaunits[1]->AgentConcentration) ==NULL ) )
+                        <td>{{$aanesthesiaunits[$i]->IntegratedPM}}</td>
+                        @php($score++)
+                        @else               
+                         <td class="fuera">{{$aanesthesiaunits[$i]->IntegratedPM}}</td>
+                        @endif         
+
+                        @if(((($aanesthesiaunits[$i]->InterfacePM) !=NULL) AND (($aanesthesiaunits[$i]->InterfacePM) !='NO') ) OR (($aanesthesiaunits[1]->InterfacePM) ==NULL ) )
+                        <td>{{$aanesthesiaunits[$i]->InterfacePM}}</td>
+                        @php($score++)
+                        @else               
+                         <td class="fuera">{{$aanesthesiaunits[$i]->IntegratedPM}}</td>
+                        @endif         
+
+                      <td>{{$aanesthesiaunits[$i]->UserInterface}}</td>
+
+                        @if(($aanesthesiaunits[$i]->PrioritizedAlarms) <=($aanesthesiaunits[1]->PrioritizedAlarms)  )
+                          <td>{{$aanesthesiaunits[$i]->PrioritizedAlarms}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$aanesthesiaunits[$i]->PrioritizedAlarms}}</td>
+                        @endif       
+
+                      <td>{{$aanesthesiaunits[$i]->HxWxD}}</td>
+                      <td>{{$aanesthesiaunits[$i]->Weight}}</td>
+                      <td>{{$aanesthesiaunits[$i]->Shelves}}</td>
+                      <td>{{$aanesthesiaunits[$i]->Drawers}}</td>
+                      <td>{{$aanesthesiaunits[$i]->CentralBrake}}</td>
+                      <td>{{$aanesthesiaunits[$i]->PowerVAC}}</td>
+                      <td>{{$aanesthesiaunits[$i]->AuxiliaryOutlets}}</td>
+  
+                        @if(((($aanesthesiaunits[$i]->BackupBattery) !=NULL) AND (($aanesthesiaunits[$i]->BackupBattery) !='NO') ) OR (($aanesthesiaunits[1]->BackupBattery) ==NULL ) )
+                        <td>{{$aanesthesiaunits[$i]->BackupBattery}}</td>
+                        @php($score++)
+                        @else               
+                         <td class="fuera">{{$aanesthesiaunits[$i]->BackupBattery}}</td>
+                        @endif         
+
+                        @if(($aanesthesiaunits[$i]->UsePerCharge) >=($aanesthesiaunits[1]->UsePerCharge)  )
+                          <td>{{$aanesthesiaunits[$i]->UsePerCharge}}</td>
+                          @php($score++)
+                        @else               
+                          <td class="fuera">{{$aanesthesiaunits[$i]->UsePerCharge}}</td>
+                        @endif                             
+
+                      {{-- PURCHASE INFORMATION --}}
+                      <td>{{$aanesthesiaunits[$i]->Warranty}}</td>
+                      <td>{{$aanesthesiaunits[$i]->ServiceContract}}</td>
+                      <td>{{$aanesthesiaunits[$i]->DeliveryTime}}</td>
+                      <td>{{$aanesthesiaunits[$i]->OtherSpecifications}}</td>
+                      <td>{{$score}}</td>
+                      @php($scoreList+= [ $aanesthesiaunits[$i]->id=> $score ])
+                  {{-- @endif
+                  
+            @endforeach --}}
               </tr>
-            @endforeach
-          </tbody>
-                {{-- @foreach ($controles as $control)
-                <tr>
-                    <th scope="row">{{$control->created_at }}</th>
-
-
-                    @if(($control->tp1 >=10.6) AND ($control->tp1 <=15.8) )
-                      <td>{{$control->tp1}}</td>
-                    @else               
-                      <td class="fuera">{{$control->tp1}}</td>
-                    @endif
-
-                    @if(($control->ptt1 >=24.1) AND ($control->ptt1 <=36.1) )
-                      <td>{{$control->ptt1}}</td>
-                    @else               
-                      <td class="fuera">{{$control->ptt1}}</td>
-                    @endif
-                    
-                    @if(($control->at1 >=89.1) AND ($control->at1 <=134) )
-                      <td>{{$control->at1}}</td>
-                    @else               
-                      <td class="fuera">{{$control->at1}}</td>
-                    @endif
-                    
-                    @if(($control->tt1 >=13.7) AND ($control->tt1 <=20.5) )
-                      <td>{{$control->tt1}}</td>
-                    @else               
-                      <td class="fuera">{{$control->tt1}}</td>
-                    @endif
-                    
-                    @if(($control->fb1 >=276) AND ($control->fb1 <=414) )
-                      <td>{{$control->fb1}}</td>
-                    @else               
-                      <td class="fuera">{{$control->fb1}}</td>
-                    @endif
-
-
-                    @if(($control->tp2 >=32.3) AND ($control->tp2 <=48.4) )
-                      <td>{{$control->tp2}}</td>
-                    @else               
-                      <td class="fuera">{{$control->tp2}}</td>
-                    @endif
-
-                    @if(($control->ptt2 >=48.9) AND ($control->ptt2 <=73.4) )
-                      <td>{{$control->ptt2}}</td>
-                    @else               
-                      <td class="fuera">{{$control->ptt2}}</td>
-                    @endif
-                    
-                    @if(($control->at2 >=48.3) AND ($control->at2 <=72.4) )
-                      <td>{{$control->at2}}</td>
-                    @else               
-                      <td class="fuera">{{$control->at2}}</td>
-                    @endif
-                    
-                    @if(($control->tt2 >=18.4) AND ($control->tt2 <=27.6) )
-                      <td>{{$control->tt2}}</td>
-                    @else               
-                      <td class="fuera">{{$control->tt2}}</td>
-                    @endif
-                    
-                    @if(($control->fb2 >=123) AND ($control->fb2 <=184) )
-                      <td>{{$control->fb2}}</td>
-                    @else               
-                      <td class="fuera">{{$control->fb2}}</td>
-                    @endif
-
-                    @if(($control->tp3 >=45.2) AND ($control->tp3 <=67.6) )
-                      <td>{{$control->tp3}}</td>
-                    @else               
-                      <td class="fuera">{{$control->tp3}}</td>
-                    @endif
-
-                    @if(($control->ptt3 >=55.9) AND ($control->ptt3 <=83.8) )
-                      <td>{{$control->ptt3}}</td>
-                    @else               
-                      <td class="fuera">{{$control->ptt3}}</td>
-                    @endif
-                    
-                    @if(($control->at3 >=34) AND ($control->at3 <=51) )
-                      <td>{{$control->at3}}</td>
-                    @else               
-                      <td class="fuera">{{$control->at3}}</td>
-                    @endif
-                    
-                    @if(($control->tt3 >=21.9) AND ($control->tt3 <=32.9) )
-                      <td>{{$control->tt3}}</td>
-                    @else               
-                      <td class="fuera">{{$control->tt3}}</td>
-                    @endif
-                    
-                    @if(($control->fb3 >=84.9) AND ($control->fb3 <=127) )
-                      <td>{{$control->fb3}}</td>
-                    @else               
-                      <td class="fuera">{{$control->fb3}}</td>
-                    @endif
-
-                </tr>
-              @endforeach --}}
+              @endfor
             </tbody>
           </table>
         </div>
          <br><br>
       <table class="table table-light table-stripe">
       <div class="container">
-        <h1 align="center">Top 5 Anesthesia Unit</h1>
+        <h1 align="center">Top 3 Anesthesia Unit</h1>
         <table border="1" class="table table-hover table-ligth  table-bordered">
           <thead class="table-secondary">
             <tr>
               <th scope="col">Manufacturer</th>
               <th scope="col">Where Marketed</th>
-              <th scope="col">FDA Clearance</th>
+              <th scope="col">Configuration</th>
               <th scope="col">SCORE</th>
             </tr>
+           </thead>
+           <tbody>
+              @for ($i =0; $i <=1; $i++)
+               @php($key_of_max = array_search( max($scoreList) , $scoreList)) 
+                <tr>
+                  <td>{{$anesthesiaunits[$key_of_max-2]->Manufacturer}}</td>
+                  <td>{{$anesthesiaunits[$key_of_max-2]->WhereMarketed}}</td>
+                  <td>{{$anesthesiaunits[$key_of_max-2]->Configuration}}</td>
+                  <td>{{max($scoreList)}}</td>
+                </tr>
+            {{-- @php(unset($scoreList[$key_of_max])) --}}
+          @endfor
         </tbody>
       </table>
       <br><br>

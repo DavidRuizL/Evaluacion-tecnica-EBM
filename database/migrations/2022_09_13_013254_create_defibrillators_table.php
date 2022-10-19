@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('defibrillators', function (Blueprint $table) {
-            $ $table->id();
+            $table->id();
             //Energy selection, J
             $table->string('Manufacturer');
             $table->string('Internal');
@@ -43,7 +43,7 @@ return new class extends Migration
             $table->string('EcgRecorder');
             $table->string('SummaryFeature');
             //BATTERY
-            $table->string('LinePower');
+            $table->string('LinePower');  
             $table->string('BatteryPower');
             $table->string('Type');
             $table->string('IntegratedOrRemovable');

@@ -14,7 +14,6 @@ return new class extends Migration
     public function up()
     {
         Schema::create('infusion_pumps', function (Blueprint $table) {
-            $table->id();
             //PUMP CAPABILITIES
             $table->id();
             $table->string('FDAClearance');
