@@ -163,7 +163,7 @@
             <input type="text" id="UMDNSCode" name="UMDNSCode" class="form-control" tabindex="3" placeholder="UMDNS Codes">
         </div> 
         <button type="submit" class= "btn btn-primary" tabindex="6">Guardar</button>
-        <a href="/controles" class="btn btn-secondary" tabindex="5">Cancelar</a>
+        <a href="/stretcher" class="btn btn-danger" tabindex="5">Cancelar</a>
     </form>
      <br><br>
     <br><br>
