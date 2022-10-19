@@ -44,17 +44,6 @@
     
         <div id="MenuNavegacion" class="collapse navbar-collapse">
           <ul class="navbar-nav ms-3">
-            {{-- <li class="nav-item">
-                          <a class="nav-link active" href="#">Ingreso de paciente</a>
-                      </li>
-            <li class="nav-item">
-              <form action="{{route('users.index')}}" method="get">
-                          <a class="nav-link active" href="{{route('users.index')}}">Consulta masiva</a>
-                      </li>
-            <li class="nav-item">
-                          <a class="nav-link active" href="{{route('users.search')}}">Consulta de paciente</a>
-                      </li> --}}
-
                       <li class="nav-item active dropdown">
                         <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                           DEVICES
@@ -62,6 +51,19 @@
                         <ul class="dropdown-menu">
                           <form action="{{route('stretcher.index')}}" method="get">
                             <li><a class="dropdown-item" href="{{route('stretcher.index')}}">Stretcher</a></li>
+                          </form>
+                          <form action="{{route('aunit.index')}}" method="get">
+                            <li><a class="dropdown-item" href="{{route('aunit.index')}}">Anesthesia Unit</a></li>
+                          </form>
+                        </ul>
+                    </li>
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                          CREATE DEVICE
+                        </a>  
+                        <ul class="dropdown-menu">
+                          <form action="{{route('stretcher.create')}}" method="get">
+                            <li><a class="dropdown-item" href="{{route('stretcher.create')}}">Stretcher</a></li>
                           </form>
                           <form action="{{route('aunit.index')}}" method="get">
                             <li><a class="dropdown-item" href="{{route('aunit.index')}}">Anesthesia Unit</a></li>

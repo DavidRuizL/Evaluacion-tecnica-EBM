@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\StretcherController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +17,7 @@ Route::get('/',  'App\Http\Controllers\HomeController');
 Route::resource('stretcher', 'App\Http\Controllers\StretcherController');
 Route::resource('aunit', 'App\Http\Controllers\AnesthesiaUnitController');
 Route::resource('aunit', 'App\Http\Controllers\AAnesthesiaUnitController');
+Route::get('stretcher/create', [StretcherController::class , 'create'])->name('stretcher.create');
 
 Route::get('/home', function () {
     return view('home');

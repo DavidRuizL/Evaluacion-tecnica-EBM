@@ -7,7 +7,7 @@
     <script type="text/javascript">
         function getOption() {
             selectElement = 
-                    document.querySelector('#select1');
+                    document.querySelector('#criteria');
                       
             output = selectElement.value;
   
@@ -38,17 +38,37 @@
       }
 
       </style>
+      @php($criteria=0)      
 
           <br />
-      
+                  <script type="text/javascript" src="js/jquery.js"></script>
+                    <script type="text/javascript">
+                    function cambiar(id) {
+                        if (id == "0") {
+                            $("#criteria")=0;
+                        }
+
+                        if (id == "1") {
+                            $("#criteria")=1;
+                        }
+
+                        if (id == "2") {
+                            $("#criteria")=2;
+                        }
+
+                        if (id == "3") {
+                            $("#criteria")=3;
+                        }
+                    }
+                    </script>
       <div class="container" >
         <br />
             <div class="form-group">  
-              @php($criteria=0)            
+                    
             <h6>Criteria</h6>
-            <form action="/stretcher">
+            <form action="/stretcher" method="post">
               @csrf
-            <select class="custom-select selector" name="criteria" id="criteria" onchange="this.form.submit()">
+            <select class="custom-select selector" name="criteria" id="criteria" onchange="cambiar(this.value)">
               {{-- <option selected>
                 Seleccione el área al que pertenece el equipo
               </option> --}}
@@ -57,7 +77,7 @@
               <option value= "2">Sistemas</option>
               <option value= "3"  >N/A</option>
             </select>
-          </div>
+
           {{ $criteria }}
           <br />
         <h1 align="center">Stretcher Mobile</h1>
