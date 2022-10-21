@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('infusion_pumps', function (Blueprint $table) {
             //PUMP CAPABILITIES
-            $table->id();
+            $table->id();            
             $table->string('FDAClearance');
-            $table->string('Tabletop/ambulatory');
+            $table->string('Tabletopambulatory');
             $table->string('PCADoseButtonLocation');
             $table->string('PumpMechanism');
             $table->string('PoleMounting');
@@ -26,21 +26,21 @@ return new class extends Migration
             $table->string('IncrementBolusDose');
             $table->string('LoadingDose');
             $table->string('KVORate(mL/hr)');
-            $table->string('Accuracy(%)');
+            $table->string('Accuracy');
             $table->string('NurseCallJack');
             $table->string('FreeFlowProtection');
-            $table->string('LockoutIntervalRange(min)');
+            $table->string('LockoutIntervalRangeMin');
             $table->string('AccumulatedDoseLimit');
             $table->string('ControlsAccess');
             $table->string('ReservoirType');
-            $table->string('VolumeCapacity(mL)');
+            $table->string('VolumeCapacitymL');
             $table->string('Access');
             $table->string('SyringeSizeDetection');
             //DISPLAY
             $table->string('Display');
             $table->string('DataDisplay');
              //ALARMS & INDICATORS
-            $table->string('Up/downOcclusion');
+            $table->string('UpdownOcclusion');
             $table->string('FlowError');
             $table->string('AirInLine');
             $table->string('SystemMalfunction');
@@ -54,8 +54,8 @@ return new class extends Migration
             //POWER SOURCE
             $table->string('LinePower');
             $table->string('Battery');
-            $table->string('OperatingTime(hr)');
-            $table->string('Recharge time(hr)');
+            $table->string('OperatingTimehr');
+            $table->string('Recharge timehr');
             $table->string('Weight');
             //PURCHASE INFORMATION
             $table->string('Warranty');
