@@ -3,7 +3,7 @@
 <div
 class="p-5 text-center bg-image opacity-15 position-relative"
 style="
-  background-image: url('https://www.clinicainternacional.com.pe/blog/wp-content/uploads/2017/08/clinica-internacional-equipo-biomedico-maquinas.jpg');
+  background-image: url('https://www.niras.com/media/s2hc343r/medical_device_istock-1281627829-min.jpg');
   background-repeat: no-repeat;
   background-position: center center;
  height: 700px; weight: 500px;

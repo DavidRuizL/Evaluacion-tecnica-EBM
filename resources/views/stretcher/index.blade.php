@@ -3,18 +3,6 @@
 @section('title' , 'Medical Devices')
     
 @section('content')
-<script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript">
-        function getOption() {
-            selectElement = 
-                    document.querySelector('#select1');
-                      
-            output = selectElement.value;
-  
-            document.querySelector('.output').textContent
-                    = output;
-        }
-    </script>
     <style>
 
 
@@ -27,6 +15,11 @@
         border: 1px solid;
         border-collapse: collapse;
       }
+  .abs-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
   
       th, td {
         padding: 5px;
@@ -40,25 +33,23 @@
       </style>
 
           <br />
-      
+      @php($criteria=0)  
       <div class="container" >
         <br />
-            <div class="form-group">  
+            {{-- <div class="form-group">  
               @php($criteria=0)            
             <h6>Criteria</h6>
-            <form action="/stretcher">
-              @csrf
-            <select class="custom-select selector" name="criteria" id="criteria" onchange="this.form.submit()">
+            <form action="/stretcher"  >
+            <select class="custom-select selector" name="criteria" id="criteria" onchange="form.submit()">
               {{-- <option selected>
                 Seleccione el área al que pertenece el equipo
               </option> --}}
-              <option value="0">Biomédica</option>
+              {{-- <option value="0">Biomédica</option>
               <option value= "1" >Infraestructura</option>
               <option value= "2">Sistemas</option>
               <option value= "3"  >N/A</option>
             </select>
-          </div>
-          {{ $criteria }}
+          </div> --}}
           <br />
         <h1 align="center">Stretcher Mobile</h1>
         <div class="row tbl-fixed" style="overflow: auto"> 
@@ -102,6 +93,7 @@
                 <th  rowspan="2">Other Specifications</th>
                 <th  rowspan="2">UMDNS Code</th>
                 <th  rowspan="2">SCORE</th>
+                <th  rowspan="2"></th>
               </tr>
               <tr>
                  <th scope="col">Length</th>
@@ -332,6 +324,8 @@
                                 <td>{{$stretcher->OtherSpecifications}}</td>
                                 <td>{{$stretcher->UMDNSCode}}</td>
                                 <td>{{$criteria}}</td>
+                                <td><a href="{{route('stretcher.edit' , $stretcher->id)}}" class="btn btn-primary">Edit</a>
+                            </td>
                             </tr>
                             @php($scoreList+= [ $stretcher->id=> $score ])
                         @endif

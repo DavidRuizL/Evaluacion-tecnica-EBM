@@ -4,6 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/1688/1688400.png" />
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -22,18 +23,11 @@
     <title>@yield('title')</title>
   </head>
   <body>
-    <div style="color:rgb(11, 5, 5); background-color: rgb(0, 255, 225);" >
-      {{-- <figure style= "width:150px;
-          height:150px;
-          background-color: rgb(0, 255, 225);
-          /* background: url('https://i1.pnghost.com/1/21/3/pngdb-la-estrella-antioquia-university-of-ces-public-universidad-de-png-D6ubqJJp0STq66KwUGEkMUeNs_t.jpg'); */
-          float:left;
-          margin-top:60px;
-          margin-left:20px;"> </figure> --}}
-          <h1 align="center" style="color:rgb(11, 5, 5); background-color: rgb(0, 255, 225);" >Technical Evaluation</h1>
-          <nav class="navbar navbar-dark" style="background-color: rgb(0, 255, 225);">
+    <div style="color:rgb(11, 5, 5); background-color: rgb(163, 214, 234);" >
+          <nav class="navbar navbar-dark" style="color:rgb(11, 5, 5); background-color:  rgb(163, 214, 234);">
               <div class="container-fluid">
-                  <a href="/home" class="navbar-brand" style="color:rgb(11, 5, 5); background-color: rgb(0, 255, 225);">Medical Devices</a>
+                
+                  <a href="/home" class="navbar-brand" style="color:rgb(11, 5, 5); background-color:  rgb(163, 214, 234);"><b>Technical Evaluation</b></a>
                   <button type="button"
                       class="navbar-toggler"
                       data-bs-toggle="collapse"
@@ -44,20 +38,9 @@
     
         <div id="MenuNavegacion" class="collapse navbar-collapse">
           <ul class="navbar-nav ms-3">
-            {{-- <li class="nav-item">
-                          <a class="nav-link active" href="#">Ingreso de paciente</a>
-                      </li>
-            <li class="nav-item">
-              <form action="{{route('users.index')}}" method="get">
-                          <a class="nav-link active" href="{{route('users.index')}}">Consulta masiva</a>
-                      </li>
-            <li class="nav-item">
-                          <a class="nav-link active" href="{{route('users.search')}}">Consulta de paciente</a>
-                      </li> --}}
-
                       <li class="nav-item active dropdown">
-                        <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                          DEVICES
+                        <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color:rgb(11, 5, 5)">
+                         EVALUATE DEVICES
                         </a>
                         <ul class="dropdown-menu">
                           <form action="{{route('stretcher.index')}}" method="get">
@@ -68,16 +51,32 @@
                           </form>
                         </ul>
                     </li>
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color:rgb(11, 5, 5)">
+                          CREATE DEVICE
+                        </a>  
+                        <ul class="dropdown-menu">
+                          <form action="{{route('stretcher.create')}}" method="get">
+                            <li><a class="dropdown-item" href="{{route('stretcher.create')}}">Stretcher</a></li>
+                          </form>
+                          <form action="{{route('aunit.index')}}" method="get">
+                            <li><a class="dropdown-item" href="{{route('aunit.index')}}">Anesthesia Unit</a></li>
+                          </form>
+                        </ul>
+                    </li>
           
                     <li class="nav-item active dropdown">
-                      <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                        CRITERIA
+                      <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color:rgb(11, 5, 5)">
+                        TECHNICAL CRITERIA
                       </a>
-                      {{-- <ul class="dropdown-menu">
-                        <form action="{{route('users.search')}}" method="get">
-                          <li><a class="dropdown-item" href="{{route('users.search')}}">Edit Criteria/New Criteria</a></li>
-                        </form>
-                      </ul> --}}
+                        <ul class="dropdown-menu">
+                          <form action="{{route('stretcher.criteria')}}" method="get">
+                            <li><a class="dropdown-item" href="{{route('stretcher.criteria')}}">Stretcher</a></li>
+                          </form>
+                          {{-- <form action="{{route('aunit.criteria')}}" method="get">
+                            <li><a class="dropdown-item" href="{{route('aunit.criteria')}}">Anesthesia Unit</a></li>
+                          </form> --}}
+                        </ul>
                   </li>
           </ul>
         </div>
@@ -103,7 +102,7 @@
   <footer class="main-footer" style="margin-bottom: 0px !important; position: relative; position:fixed;
   left:0px;
   bottom:0px;
-  background: rgb(0, 255, 225);
+  background: rgb(163, 214, 234);
   width: 100%;
   text-align: center
   text-shadow: 0px 1px rgba( 0, 0, 0, 0.3 );">
@@ -116,9 +115,9 @@
       <b>Version</b> 4.0.8
     </div>
     <div class="container-fluid text-center p-0.5">
-          <strong>Contactenos:  </strong> 
-          +57 1802381
-          <p class="small">Medellín, Colombia</p>
+          <strong>Medellín, Colombia</strong> 
+
+          <p class="small"></p>
     </div>
     
   </footer>
