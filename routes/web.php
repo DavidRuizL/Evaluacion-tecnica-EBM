@@ -15,11 +15,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',  'App\Http\Controllers\HomeController');
 
 Route::get('stretcher/criteria', [StretcherController::class , 'criteria'])->name('stretcher.criteria');
+Route::get('stretcher/select', [StretcherController::class , 'select'])->name('stretcher.select');
+Route::get('stretcher/per1', [StretcherController::class, 'index1' ])->name('stretcher.per1');
+Route::get('stretcher/per2', [StretcherController::class, 'index2'  ])->name('stretcher.per2');
+Route::get('stretcher/per3', [StretcherController::class, 'index3'  ])->name('stretcher.per3');
 Route::resource('stretcher', StretcherController::class);
 Route::resource('aunit', 'App\Http\Controllers\AnesthesiaUnitController');
 Route::resource('aunit', 'App\Http\Controllers\AAnesthesiaUnitController');
-// Route::get('stretcher/edit', [StretcherController::class , 'edit'])->name('stretcher.edit');
-// Route::get('stretcher/{id}', [StretcherController::class, 'edit'])->name('stretcher.edit');
+
 
 Route::get('/home', function () {
     return view('home');

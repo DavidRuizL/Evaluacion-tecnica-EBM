@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Oximeter;
 use Illuminate\Database\Seeder;
 
 class Oximeter extends Seeder
@@ -57,5 +58,6 @@ class Oximeter extends Seeder
             //Purchase information
             $Oximeter->LisPrice= '';
             $Oximeter->Warranty= '';
+            $Oximeter ->save();
     }
 }

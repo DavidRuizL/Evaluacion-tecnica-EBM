@@ -220,8 +220,135 @@ NV8002';
         $Stretcher4 ->save();
 
 
+               // ARJO INC           MARCA
+        //Lifeguard LG20      MODELO
+        $Stretcher5= new Stretcher;
+        $Stretcher5 ->Manufacturer="ARJO INC ";
+        $Stretcher5 ->WhereMarketed='Worldwide';
+        $Stretcher5 ->StretcherType='Adjustable height';
+        $Stretcher5 ->PositionControl='Dual footpedals';
+        $Stretcher5 ->Trendelenburg=12;
+        $Stretcher5 ->ReverseTrendelenburg=0;
+        $Stretcher5 ->Fowler=87;
+        $Stretcher5 ->LegLift='No';
+        $Stretcher5 ->KneeFlex='No';
+        $Stretcher5 ->Siderails='Fold-down';
+        $Stretcher5 ->RadiolucentTop='YES';
+        $Stretcher5 ->OxygenTankHolder='YES';
+        $Stretcher5 ->UtilityShelf='YES';
+        $Stretcher5 ->RestrainingStraps='YES';
+        $Stretcher5 ->Bumpers='YES';
+        $Stretcher5 ->Sockets=4;
+        $Stretcher5 ->Diameter=20;
+        $Stretcher5 ->Brakes=4;
+        $Stretcher5 ->FrameMaterial='Mild steel coated in Rilsan nylon';
+        $Stretcher5 ->PatientPlatform='Nylon coated';            
+        $Stretcher5 ->MattressSurfaceType='';
+        $Stretcher5 ->MaximumPatientWeight=180;        
+        $Stretcher5 ->OptionalAccessories='YES'; // SON MUCHOS ACCESSORIES
+        $Stretcher5 ->StretcherL=211;
+        $Stretcher5 ->StretcherW=77;
+        $Stretcher5 ->StretcherHeightL=60;
+        $Stretcher5 ->StretcherHeightH=92;
+        $Stretcher5 ->MattressL=196;  
+        $Stretcher5 ->MattressW=67;            
+        $Stretcher5 ->MattressThickness=6.5;
+        $Stretcher5 ->MattressWeight=120;        
+        $Stretcher5 ->StretcherWarranty=1;
+        $Stretcher5 ->MattressWarranty=1;      
+        $Stretcher5 ->HydraulicPumpWarranty=1;        
+        $Stretcher5 ->DeliveryTime='';
+        $Stretcher5 ->OtherSpecifications='YES';                      
+        $Stretcher5 ->UMDNSCode='15726, 19021';        
+        $Stretcher5 ->save();
 
 
+
+
+        // HILL ROM CO          MARCA
+        //P8000 PSS Powered Procedural   MODELO
+        $Stretcher6= new Stretcher;
+        $Stretcher6 ->Manufacturer="HILL ROM CO";
+        $Stretcher6 ->WhereMarketed='USA, CANADA';
+        $Stretcher6 ->StretcherType='Hydraulic, electric';
+        $Stretcher6 ->PositionControl='Footpedals';
+        $Stretcher6 ->Trendelenburg=18;
+        $Stretcher6 ->ReverseTrendelenburg=18;
+        $Stretcher6 ->Fowler=90;
+        $Stretcher6 ->LegLift='Optional';
+        $Stretcher6 ->KneeFlex='Optional';
+        $Stretcher6 ->Siderails='Fold-down';
+        $Stretcher6 ->RadiolucentTop='Optional';
+        $Stretcher6 ->OxygenTankHolder='Vertical';
+        $Stretcher6 ->UtilityShelf='Optional';
+        $Stretcher6 ->RestrainingStraps='YES';
+        $Stretcher6 ->Bumpers='YES';
+        $Stretcher6 ->Sockets=4;
+        $Stretcher6 ->Diameter=20.3;
+        $Stretcher6 ->Brakes=4;
+        $Stretcher6 ->FrameMaterial='Steel/epoxy';
+        $Stretcher6 ->PatientPlatform='Steel or resin';            
+        $Stretcher6 ->MattressSurfaceType='Foam';
+        $Stretcher6 ->MaximumPatientWeight=317.5;        
+        $Stretcher6 ->OptionalAccessories='YES'; // SON MUCHOS ACCESSORIES
+        $Stretcher6 ->StretcherL=210;
+        $Stretcher6 ->StretcherW=91;
+        $Stretcher6 ->StretcherHeightL=52.6;
+        $Stretcher6 ->StretcherHeightH=87;
+        $Stretcher6 ->MattressL=190.5;  
+        $Stretcher6 ->MattressW=66;            
+        $Stretcher6 ->MattressThickness=7.6;
+        $Stretcher6 ->MattressWeight=200;        
+        $Stretcher6 ->StretcherWarranty=3;
+        $Stretcher6 ->MattressWarranty=2;      
+        $Stretcher6 ->HydraulicPumpWarranty=3;        
+        $Stretcher6 ->DeliveryTime='3 weeks';
+        $Stretcher6 ->OtherSpecifications='YES';                      
+        $Stretcher6 ->UMDNSCode='15726, 19021';        
+        $Stretcher6 ->save();
+
+
+         // Schmitz und Soehne GmbH        MARCA
+        //280.1800.0 (280.2020.0)          MODELO
+        $Stretcher7= new Stretcher;
+        $Stretcher7 ->Manufacturer="Schmitz und Soehne GmbH";
+        $Stretcher7 ->WhereMarketed='Worldwide';
+        $Stretcher7 ->StretcherType='Hydraulic';
+        $Stretcher7 ->PositionControl='Manual, Hydraulic';
+        $Stretcher7 ->Trendelenburg=11;
+        $Stretcher7 ->ReverseTrendelenburg=11;
+        $Stretcher7 ->Fowler=70;
+        $Stretcher7 ->LegLift='NO';
+        $Stretcher7 ->KneeFlex='NO';
+        $Stretcher7 ->Siderails='YES';
+        $Stretcher7 ->RadiolucentTop='YES';
+        $Stretcher7 ->OxygenTankHolder='Optional';
+        $Stretcher7 ->UtilityShelf='NO';
+        $Stretcher7 ->RestrainingStraps='Optional';
+        $Stretcher7 ->Bumpers='Shaped for collision protection';
+        $Stretcher7 ->Sockets=4;
+        $Stretcher7 ->Diameter=15;
+        $Stretcher7 ->Brakes=2;
+        $Stretcher7 ->FrameMaterial='Steel/aluminium';
+        $Stretcher7 ->PatientPlatform='PLastic, laminated wood, steel, aluminium';            
+        $Stretcher7 ->MattressSurfaceType='Memory foam';
+        $Stretcher7 ->MaximumPatientWeight=225;        
+        $Stretcher7 ->OptionalAccessories='YES'; // SON MUCHOS ACCESSORIES
+        $Stretcher7 ->StretcherL=226;
+        $Stretcher7 ->StretcherW=72;
+        $Stretcher7 ->StretcherHeightL=64.5;
+        $Stretcher7 ->StretcherHeightH=101.5;
+        $Stretcher7 ->MattressL=200;  
+        $Stretcher7 ->MattressW=60;            
+        $Stretcher7 ->MattressThickness=157;
+        $Stretcher7 ->MattressWeight=200;        
+        $Stretcher7 ->StretcherWarranty=1;
+        $Stretcher7 ->MattressWarranty=1;      
+        $Stretcher7 ->HydraulicPumpWarranty=1;        
+        $Stretcher7 ->DeliveryTime='4-6weeks';
+        $Stretcher7 ->OtherSpecifications='YES';                      
+        $Stretcher7 ->UMDNSCode='15726, 19021';        
+        $Stretcher7 ->save();
 
     }
 }

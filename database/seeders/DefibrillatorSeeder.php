@@ -52,5 +52,6 @@ class DefibrillatorSeeder extends Seeder
             $Defibrillator->RechargeTime= '';
             $Defibrillator->Weight= '';
             $Defibrillator->ExternalOutputs= '';
+            $Defibrillator ->save();
     }
 }

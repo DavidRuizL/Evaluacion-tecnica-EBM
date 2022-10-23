@@ -43,8 +43,8 @@
                          EVALUATE DEVICES
                         </a>
                         <ul class="dropdown-menu">
-                          <form action="{{route('stretcher.index')}}" method="get">
-                            <li><a class="dropdown-item" href="{{route('stretcher.index')}}">Stretcher</a></li>
+                          <form action="{{route('stretcher.select')}}" method="get">
+                            <li><a class="dropdown-item" href="{{route('stretcher.select')}}">Stretcher</a></li>
                           </form>
                           <form action="{{route('aunit.index')}}" method="get">
                             <li><a class="dropdown-item" href="{{route('aunit.index')}}">Anesthesia Unit</a></li>

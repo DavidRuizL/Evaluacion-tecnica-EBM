@@ -8,11 +8,32 @@ use Illuminate\Support\Facades\DB;
 
 class StretcherController extends Controller
 {
+
+      public function select()
+    {
+        return view('stretcher.select');
+    }
+
   public function criteria()
    {
        $stretcher=  \App\Models\Stretcher::where("id","<",5)->get(); 
        return view('stretcher.criteria')->with('stretchers', $stretcher);
    }
+   public function index1()
+{
+   $stretcher=  \App\Models\Stretcher::all();
+   return view('stretcher.per1')->with('stretchers', $stretcher);
+}
+   public function index2()
+{
+   $stretcher=  \App\Models\Stretcher::all();
+   return view('stretcher.per2')->with('stretchers', $stretcher);
+}
+   public function index3()
+{
+   $stretcher=  \App\Models\Stretcher::all();
+   return view('stretcher.per3')->with('stretchers', $stretcher);
+}
     /**
      * Display a listing of the resource.
      *
@@ -23,6 +44,7 @@ class StretcherController extends Controller
         $stretcher=  \App\Models\Stretcher::all();
         return view('stretcher.index')->with('stretchers', $stretcher);
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -114,6 +136,14 @@ class StretcherController extends Controller
      * @param  \App\Models\Stretcher  $stretcher
      * @return \Illuminate\Http\Response
      */
+          public function updatec(Request $request,  $criteria)
+    {
+        $Stretcher= Stretcher::findOrFail($criteria);
+        $Stretcher ->DeliveryTime=$request->input('criteria');
+        $Stretcher ->save();
+        return redirect()->route('stretcher.index');
+
+    }
     public function update(Request $request,  $id)
     {
         $Stretcher= Stretcher::findOrFail($id);
