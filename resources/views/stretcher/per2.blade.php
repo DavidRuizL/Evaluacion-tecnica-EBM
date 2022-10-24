@@ -117,21 +117,21 @@
                                   <td class="fuera">{{$stretcher->PositionControl}}</td>
                                 @endif                                
 
-                                @if(($stretcher->Trendelenburg) >=($stretchers[2]->Trendelenburg)  )
+                                @if((($stretcher->Trendelenburg) >=($stretchers[2]->Trendelenburg)) OR ($stretchers[2]->Trendelenburg==0) )
                                   <td>{{$stretcher->Trendelenburg}}</td>
                                   @php($score++)
                                 @else               
                                   <td class="fuera">{{$stretcher->Trendelenburg}}</td>
                                 @endif
 
-                                @if(($stretcher->ReverseTrendelenburg) >=($stretchers[2]->ReverseTrendelenburg)  )
+                                @if((($stretcher->ReverseTrendelenburg) >=($stretchers[2]->ReverseTrendelenburg)) OR ($stretchers[2]->ReverseTrendelenburg==0) )
                                   <td>{{$stretcher->ReverseTrendelenburg}}</td>
                                   @php($score++)
                                 @else               
                                   <td class="fuera">{{$stretcher->ReverseTrendelenburg}}</td>
                                 @endif
 
-                                @if(($stretcher->Fowler) >=($stretchers[2]->Fowler)  )
+                                @if((($stretcher->Fowler) >=($stretchers[2]->Fowler) OR ($stretchers[2]->Fowler==0) ))
                                   <td>{{$stretcher->Fowler}}</td>
                                   @php($score++)
                                 @else               
@@ -194,21 +194,21 @@
                                   <td class="fuera">{{$stretcher->Bumpers}}</td>
                                 @endif                                       
 
-                                @if(($stretcher->Sockets) >=($stretchers[2]->Sockets)  )
+                                @if((($stretcher->Sockets) >=($stretchers[2]->Sockets))  OR ($stretchers[2]->Sockets==0) )
                                   <td>{{$stretcher->Sockets}}</td>
                                   @php($score++)
                                 @else               
                                   <td class="fuera">{{$stretcher->Sockets}}</td>
                                 @endif
 
-                                @if(($stretcher->Diameter) >=($stretchers[2]->Diameter)  )
+                                @if((($stretcher->Diameter) >=($stretchers[2]->Diameter)) OR ($stretchers[2]->Diameter==0)  )
                                   <td>{{$stretcher->Diameter}}</td>
                                   @php($score++)
                                 @else               
                                   <td class="fuera">{{$stretcher->Diameter}}</td>
                                 @endif
 
-                                @if(($stretcher->Brakes) >=($stretchers[2]->Brakes)  )
+                                @if((($stretcher->Brakes) >=($stretchers[2]->Brakes)) OR ($stretchers[2]->Brakes==0)  )  
                                   <td>{{$stretcher->Brakes}}</td>
                                   @php($score++)
                                 @else               
@@ -219,7 +219,7 @@
                                 <td>{{$stretcher->PatientPlatform}}</td>
                                 <td>{{$stretcher->MattressSurfaceType}}</td>
 
-                                @if(($stretcher->MaximumPatientWeight) >=($stretchers[2]->MaximumPatientWeight)  )
+                                @if((($stretcher->MaximumPatientWeight) >=($stretchers[2]->MaximumPatientWeight) )OR ($stretchers[2]->MaximumPatientWeight==0)  )  
                                   <td>{{$stretcher->MaximumPatientWeight}}</td>
                                   @php($score++)
                                 @else               
@@ -228,77 +228,77 @@
 
                                 <td>{{$stretcher->OptionalAccessories}}</td>
 
-                                @if(($stretcher->StretcherL) <($stretchers[2]->StretcherL)  )
+                                @if((($stretcher->StretcherL) <=($stretchers[2]->StretcherL) ) OR ($stretchers[2]->StretcherL==0)  )
                                   <td>{{$stretcher->StretcherL}}</td>
                                   @php($score++)
                                 @else               
                                   <td class="fuera">{{$stretcher->StretcherL}}</td>
                                 @endif                                       
 
-                                 @if(($stretcher->StretcherW) <($stretchers[2]->StretcherW)  )
+                                 @if((($stretcher->StretcherW) <=($stretchers[2]->StretcherW)) OR ($stretchers[2]->StretcherW==0)  )
                                   <td>{{$stretcher->StretcherW}}</td>
                                   @php($score++)
                                 @else               
                                   <td class="fuera">{{$stretcher->StretcherW}}</td>
                                 @endif                                      
 
-                                @if(($stretcher->StretcherHeightL) >=($stretchers[2]->StretcherHeightL)  )
+                                @if((($stretcher->StretcherHeightL) >=($stretchers[2]->StretcherHeightL))OR ($stretchers[2]->StretcherHeightL==0))
                                   <td>{{$stretcher->StretcherHeightL}}</td>
                                   @php($score++)
                                 @else               
                                   <td class="fuera">{{$stretcher->StretcherHeightL}}</td>
                                 @endif       
 
-                                @if(($stretcher->StretcherHeightH) <($stretchers[2]->StretcherHeightH)  )
+                                @if((($stretcher->StretcherHeightH) <=($stretchers[2]->StretcherHeightH)) OR ($stretchers[2]->StretcherHeightH==0))
                                   <td>{{$stretcher->StretcherHeightH}}</td>
                                   @php($score++)
                                 @else               
                                   <td class="fuera">{{$stretcher->StretcherHeightH}}</td>
                                 @endif                                     
 
-                                @if(($stretcher->MattressL) >=($stretchers[2]->MattressL)  )
+                                @if(((($stretcher->MattressL) >=($stretchers[2]->MattressL)))  OR ($stretchers[2]->StretcherW==0))
                                   <td>{{$stretcher->MattressL}}</td>
                                   @php($score++)
                                 @else               
                                   <td class="fuera">{{$stretcher->MattressL}}</td>
                                 @endif                                       
 
-                                @if(($stretcher->MattressW) >=($stretchers[2]->MattressW)  )
+                                @if(((($stretcher->MattressW) >=($stretchers[2]->MattressW)))  OR ($stretchers[2]->StretcherW==0))
                                   <td>{{$stretcher->MattressW}}</td>
                                   @php($score++)
                                 @else               
                                   <td class="fuera">{{$stretcher->MattressW}}</td>
                                 @endif                                    
 
-                                @if(($stretcher->MattressThickness) >=($stretchers[2]->MattressThickness)  )
+                                @if(((($stretcher->MattressThickness) >=($stretchers[2]->MattressThickness)))  OR ($stretchers[2]->StretcherW==0))
                                   <td>{{$stretcher->MattressThickness}}</td>
                                   @php($score++)
                                 @else               
                                   <td class="fuera">{{$stretcher->MattressThickness}}</td>
                                 @endif                                            
 
-                                @if(($stretcher->MattressWeight) <($stretchers[2]->MattressWeight)  )
+                                @if((($stretcher->MattressWeight) <=($stretchers[2]->MattressWeight)) OR ($stretchers[2]->MattressWeight==0) )
                                   <td>{{$stretcher->MattressWeight}}</td>
                                   @php($score++)
                                 @else               
                                   <td class="fuera">{{$stretcher->MattressWeight}}</td>
                                 @endif      
 
-                                @if(($stretcher->StretcherWarranty) >=($stretchers[2]->StretcherWarranty)  )
+                                @if((($stretcher->StretcherWarranty) >=($stretchers[2]->StretcherWarranty)) OR ($stretchers[2]->StretcherW==0) )
                                   <td>{{$stretcher->StretcherWarranty}}</td>
                                   @php($score++)
                                 @else               
                                   <td class="fuera">{{$stretcher->StretcherWarranty}}</td>
                                 @endif                                           
 
-                                @if(($stretcher->MattressWarranty) >=($stretchers[2]->MattressWarranty)  )
+                                @if((($stretcher->MattressWarranty) >=($stretchers[2]->MattressWarranty))  OR ($stretchers[2]->StretcherW==0))
                                   <td>{{$stretcher->MattressWarranty}}</td>
                                   @php($score++)
                                 @else               
                                   <td class="fuera">{{$stretcher->MattressWarranty}}</td>
                                 @endif                                            
 
-                                @if(($stretcher->HydraulicPump) >=($stretchers[2]->HydraulicPump)  )
+                                @if((($stretcher->HydraulicPump) >=($stretchers[2]->HydraulicPump)) OR ($stretchers[2]->StretcherW==0) )
                                   <td>{{$stretcher->HydraulicPump}}</td>
                                   @php($score++)
                                 @else               
