@@ -36,7 +36,7 @@ return new class extends Migration
             $table->string('VolumeCapacitymL');
             $table->string('Access');
             $table->string('SyringeSizeDetection');
-            //DISPLAY
+            //DISPLAYphp 
             $table->string('Display');
             $table->string('DataDisplay');
              //ALARMS & INDICATORS

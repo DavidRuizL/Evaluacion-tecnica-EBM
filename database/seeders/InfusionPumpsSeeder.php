@@ -15,7 +15,7 @@ class InfusionPumpsSeeder extends Seeder
      */
     public function run()
     {   
-        $InfusionPumps = new InfusionPump;
+        $InfusionPumps = new InfusionPumps;
         //PUMP CAPABILITIES
        
         $InfusionPumps->FDAClearance= '';
