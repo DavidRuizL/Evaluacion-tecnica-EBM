@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Defibrillator;
 use Illuminate\Database\Seeder;
 
 class DefibrillatorSeeder extends Seeder

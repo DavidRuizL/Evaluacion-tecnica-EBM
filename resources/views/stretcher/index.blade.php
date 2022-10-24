@@ -227,14 +227,14 @@
 
                                 <td>{{$stretcher->OptionalAccessories}}</td>
 
-                                @if(($stretcher->StretcherL) <($stretchers[0]->StretcherL)  )
+                                @if(($stretcher->StretcherL) <=($stretchers[0]->StretcherL)  )
                                   <td>{{$stretcher->StretcherL}}</td>
                                   @php($score++)
                                 @else               
                                   <td class="fuera">{{$stretcher->StretcherL}}</td>
                                 @endif                                       
 
-                                 @if(($stretcher->StretcherW) <($stretchers[0]->StretcherW)  )
+                                 @if(($stretcher->StretcherW) <=($stretchers[0]->StretcherW)  )
                                   <td>{{$stretcher->StretcherW}}</td>
                                   @php($score++)
                                 @else               
@@ -248,7 +248,7 @@
                                   <td class="fuera">{{$stretcher->StretcherHeightL}}</td>
                                 @endif       
 
-                                @if(($stretcher->StretcherHeightH) <($stretchers[0]->StretcherHeightH)  )
+                                @if(($stretcher->StretcherHeightH) <=($stretchers[0]->StretcherHeightH)  )
                                   <td>{{$stretcher->StretcherHeightH}}</td>
                                   @php($score++)
                                 @else               
@@ -276,7 +276,7 @@
                                   <td class="fuera">{{$stretcher->MattressThickness}}</td>
                                 @endif                                            
 
-                                @if(($stretcher->MattressWeight) <($stretchers[0]->MattressWeight)  )
+                                @if(($stretcher->MattressWeight) <=($stretchers[0]->MattressWeight)  )
                                   <td>{{$stretcher->MattressWeight}}</td>
                                   @php($score++)
                                 @else               

@@ -350,5 +350,132 @@ NV8002';
         $Stretcher7 ->UMDNSCode='15726, 19021';        
         $Stretcher7 ->save();
 
+// Stryker Medical Div Stryker Corp      MARCA
+        // Prime Zoom 1125                       MODELO
+        $Stretcher8= new Stretcher;
+        $Stretcher8 ->Manufacturer="Stryker Medical Div Stryker Corp";
+        $Stretcher8 ->WhereMarketed='Worldwide';
+        $Stretcher8 ->StretcherType='Hydraulic';
+        $Stretcher8 ->PositionControl='Footpedal';
+        $Stretcher8 ->Trendelenburg=18;
+        $Stretcher8 ->ReverseTrendelenburg=18;
+        $Stretcher8 ->Fowler=90;
+        $Stretcher8 ->LegLift='YES';
+        $Stretcher8 ->KneeFlex='Optional';
+        $Stretcher8 ->Siderails='Glideaway';
+        $Stretcher8 ->RadiolucentTop='NO';
+        $Stretcher8 ->OxygenTankHolder='Litter-mounted';
+        $Stretcher8 ->UtilityShelf='YES';
+        $Stretcher8 ->RestrainingStraps='Optional';
+        $Stretcher8 ->Bumpers='Integrated';
+        $Stretcher8 ->Sockets=4;
+        $Stretcher8 ->Diameter=20;
+        $Stretcher8 ->Brakes=2;
+        $Stretcher8 ->FrameMaterial='Steel';
+        $Stretcher8 ->PatientPlatform='Composite';            
+        $Stretcher8 ->MattressSurfaceType='Isoflex SE / Confortgel';
+        $Stretcher8 ->MaximumPatientWeight=318;        
+        $Stretcher8 ->OptionalAccessories='YES'; // SON MUCHOS ACCESSORIES
+        $Stretcher8 ->StretcherL=218;
+        $Stretcher8 ->StretcherW=86;
+        $Stretcher8 ->StretcherHeightL=58;
+        $Stretcher8 ->StretcherHeightH=86.4;
+        $Stretcher8 ->MattressL=191;  
+        $Stretcher8 ->MattressW=75.3;            
+        $Stretcher8 ->MattressThickness=10.2;
+        $Stretcher8 ->MattressWeight=200;        
+        $Stretcher8 ->StretcherWarranty=1;
+        $Stretcher8 ->MattressWarranty=1;      
+        $Stretcher8 ->HydraulicPumpWarranty=0;        
+        $Stretcher8 ->DeliveryTime='';
+        $Stretcher8 ->OtherSpecifications='';                      
+        $Stretcher8 ->UMDNSCode='19021';        
+        $Stretcher8 ->save();
+
+
+        // Advanced Instrumentations   MARCA
+        // ST-100                      MODELO
+        $Stretcher9= new Stretcher;
+        $Stretcher9 ->Manufacturer="Advanced Instrumentations";
+        $Stretcher9 ->WhereMarketed='Worldwide';
+        $Stretcher9 ->StretcherType='Hydraulic';
+        $Stretcher9 ->PositionControl='Manual crank, Vertical adjustment';
+        $Stretcher9 ->Trendelenburg=0;
+        $Stretcher9 ->ReverseTrendelenburg=0;
+        $Stretcher9 ->Fowler=45;
+        $Stretcher9 ->LegLift='NO';
+        $Stretcher9 ->KneeFlex='NO';
+        $Stretcher9 ->Siderails='Drop /Fold-down';
+        $Stretcher9 ->RadiolucentTop='NO';
+        $Stretcher9 ->OxygenTankHolder='YES';
+        $Stretcher9 ->UtilityShelf='NO';
+        $Stretcher9 ->RestrainingStraps='NO';
+        $Stretcher9 ->Bumpers='YES';
+        $Stretcher9 ->Sockets=1;
+        $Stretcher9 ->Diameter=15;
+        $Stretcher9 ->Brakes=2;
+        $Stretcher9 ->FrameMaterial='Steel';
+        $Stretcher9 ->PatientPlatform='PLastic bed board and side rails';            
+        $Stretcher9 ->MattressSurfaceType='Foam cushion, vinyl cover';
+        $Stretcher9 ->MaximumPatientWeight=250;        
+        $Stretcher9 ->OptionalAccessories='NO'; // SON MUCHOS ACCESSORIES
+        $Stretcher9 ->StretcherL=188;
+        $Stretcher9 ->StretcherW=61;
+        $Stretcher9 ->StretcherHeightL=56.8;
+        $Stretcher9 ->StretcherHeightH=85.8;
+        $Stretcher9 ->MattressL=0;  
+        $Stretcher9 ->MattressW=0;            
+        $Stretcher9 ->MattressThickness=0;
+        $Stretcher9 ->MattressWeight=98.4;        
+        $Stretcher9 ->StretcherWarranty=2;
+        $Stretcher9 ->MattressWarranty=2;      
+        $Stretcher9 ->HydraulicPumpWarranty=2;        
+        $Stretcher9 ->DeliveryTime='2-4 weeks';
+        $Stretcher9 ->OtherSpecifications='';                      
+        $Stretcher9 ->UMDNSCode='19021';        
+        $Stretcher9 ->save();
+
+// Anetic Aid   MARCA
+        // QA3 Series   MODELO
+        $Stretcher10= new Stretcher;
+        $Stretcher10 ->Manufacturer="Anetic Aid";
+        $Stretcher10 ->WhereMarketed='Worldwide';
+        $Stretcher10 ->StretcherType='Hydraulic';
+        $Stretcher10 ->PositionControl='Manual';
+        $Stretcher10 ->Trendelenburg=12;
+        $Stretcher10 ->ReverseTrendelenburg=0;
+        $Stretcher10 ->Fowler=45;
+        $Stretcher10 ->LegLift='NO';
+        $Stretcher10 ->KneeFlex='NO';
+        $Stretcher10 ->Siderails='YES';
+        $Stretcher10 ->RadiolucentTop='Emergency version only';
+        $Stretcher10 ->OxygenTankHolder='YES';
+        $Stretcher10 ->UtilityShelf='YES';
+        $Stretcher10 ->RestrainingStraps='NO';
+        $Stretcher10 ->Bumpers='YES';
+        $Stretcher10 ->Sockets=2;
+        $Stretcher10 ->Diameter=15;
+        $Stretcher10 ->Brakes=2;
+        $Stretcher10 ->FrameMaterial='Covered steel (molding)';
+        $Stretcher10 ->PatientPlatform='Molded construction';            
+        $Stretcher10 ->MattressSurfaceType='';
+        $Stretcher10 ->MaximumPatientWeight=320;        
+        $Stretcher10 ->OptionalAccessories='YES'; // SON MUCHOS ACCESSORIES
+        $Stretcher10 ->StretcherL=215;
+        $Stretcher10 ->StretcherW=80.5;
+        $Stretcher10 ->StretcherHeightL=47.5;
+        $Stretcher10 ->StretcherHeightH=77.5;
+        $Stretcher10 ->MattressL=20.3;  
+        $Stretcher10 ->MattressW=70.5;            
+        $Stretcher10 ->MattressThickness=9;
+        $Stretcher10 ->MattressWeight=128;        
+        $Stretcher10 ->StretcherWarranty=1;
+        $Stretcher10 ->MattressWarranty=1;      
+        $Stretcher10 ->HydraulicPumpWarranty=1;        
+        $Stretcher10 ->DeliveryTime='4-6 weeks';
+        $Stretcher10 ->OtherSpecifications='';                      
+        $Stretcher10 ->UMDNSCode='15726, 19021';        
+        $Stretcher10 ->save();
+
     }
 }

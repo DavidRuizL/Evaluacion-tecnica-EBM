@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('infusion_pumps', function (Blueprint $table) {
+        Schema::create('InfusionPumps', function (Blueprint $table) {
             //PUMP CAPABILITIES
             $table->id();            
             $table->string('FDAClearance');
@@ -55,7 +55,7 @@ return new class extends Migration
             $table->string('LinePower');
             $table->string('Battery');
             $table->string('OperatingTimehr');
-            $table->string('Recharge timehr');
+            $table->string('Rechargetimehr');
             $table->string('Weight');
             //PURCHASE INFORMATION
             $table->string('Warranty');
@@ -72,6 +72,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('infusion_pumps');
+        Schema::dropIfExists('infusionpumps');
     }
 };

@@ -1,12 +1,12 @@
 <?php
 
 namespace Database\Seeders;
+
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\InfusionPump;
 use Illuminate\Database\Seeder;
 
-
-class InfusionpumpSeeder extends Seeder
+class InfusionPumpSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,7 +14,7 @@ class InfusionpumpSeeder extends Seeder
      * @return void
      */
     public function run()
-    {   
+    {
         $InfusionPump = new InfusionPump;
         //PUMP CAPABILITIES
        
@@ -58,12 +58,15 @@ class InfusionpumpSeeder extends Seeder
         $InfusionPump->Battery= 'Pumps that accept disposable and rechargeable batteries preferred';
         $InfusionPump->OperatingTimehr= '≥5 @ 10 mL/hr';
         $InfusionPump->Rechargetimehr= '';
-        $InfusionPump->Weight;
+        $InfusionPump->Weight= '';
         //PURCHASE INFORMATION
-        $InfusionPump->Warranty;
+        $InfusionPump->Warranty= '';
         $InfusionPump->TrainingWithPurchase= '';
         $InfusionPump->ServiceContract= '';
         $InfusionPump ->save();
-        
     }
 }
+
+
+
+

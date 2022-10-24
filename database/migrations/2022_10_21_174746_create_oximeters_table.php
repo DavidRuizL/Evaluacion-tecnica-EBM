@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('oximeters', function (Blueprint $table) {
+        Schema::create('Oximeters', function (Blueprint $table) {
             $table->id();
             //OXIMETER CAPABILITIES
 

@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('defibrillators', function (Blueprint $table) {
+        Schema::create('Defibrillators', function (Blueprint $table) {
             $table->id();
             //Energy selection, J
             $table->string('Manufacturer');
