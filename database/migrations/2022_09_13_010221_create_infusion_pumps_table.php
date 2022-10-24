@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('BolusDose');
             $table->string('IncrementBolusDose');
             $table->string('LoadingDose');
-            $table->string('KVORate(mL/hr)');
+            $table->string('KVORatemLhr');
             $table->string('Accuracy');
             $table->string('NurseCallJack');
             $table->string('FreeFlowProtection');
