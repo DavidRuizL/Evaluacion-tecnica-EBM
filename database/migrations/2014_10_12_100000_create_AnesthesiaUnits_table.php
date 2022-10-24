@@ -53,6 +53,34 @@ return new class extends Migration
             $table->string('OtherControls');
             $table->string('SystemChecks');
             $table->string('ScavengingSystem');
+
+
+
+            
+
+
+
+           $table->string('Number');
+            $table->string('TypeD');
+            $table->string('IntegratedPM');
+            $table->string('InterfacePM');
+            $table->string('UserInterface');
+            $table->string('PrioritizedAlarms');
+
+            $table->string('HxWxD');
+            $table->string('Weight');
+            $table->string('Shelves');
+            $table->string('Drawers');
+            $table->string('CentralBrake');
+            $table->string('PowerVAC');
+            $table->string('AuxiliaryOutlets');
+            $table->string('BackupBattery');
+            $table->string('UsePerCharge');
+            //PURCHASE INFORMATION
+            $table->string('Warranty');
+            $table->string('ServiceContract');
+            $table->string('DeliveryTime');
+            $table->string('OtherSpecifications');
             $table->timestamps();
 
         });

@@ -54,6 +54,27 @@ class AnesthesiaUnitSeeder extends Seeder
         $AUnit1->OtherControls='';
         $AUnit1->SystemChecks='YES';
         $AUnit1->ScavengingSystem='YES';
-        $AUnit1 ->save();
+
+        $AUnit1->Number=1;
+        $AUnit1->TypeD='';
+        $AUnit1->IntegratedPM='YES';
+        $AUnit1->InterfacePM='YES';
+        $AUnit1->UserInterface='';
+        $AUnit1->PrioritizedAlarms='YES';
+        $AUnit1->HxWxD='';
+        $AUnit1->Weight='';
+        $AUnit1->Shelves='';
+        $AUnit1->Drawers='';
+        $AUnit1->CentralBrake='';
+        $AUnit1->PowerVAC='';
+        $AUnit1->AuxiliaryOutlets='';
+        $AUnit1->BackupBattery='YES';
+        $AUnit1->UsePerCharge=0.5;
+        //PURCHASE INFORMATION
+        $AUnit1->Warranty='';
+        $AUnit1->ServiceContract='';
+        $AUnit1->DeliveryTime='';
+        $AUnit1->OtherSpecifications='';
+        $AUnit1 ->save();        
     }
 }
