@@ -36,6 +36,7 @@
         <br />
           <br />
         <h1 align="center">Stretcher Mobile vs Personalized 3</h1>
+          <br><br>
         <div class="row tbl-fixed" style="overflow: auto"> 
           <table border="1" class="table table-hover table-ligth  table-bordered table-stripe" >
             <thead class="table-secondary">

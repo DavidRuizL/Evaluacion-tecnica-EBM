@@ -36,22 +36,9 @@
       @php($criteria=0)  
       <div class="container" >
         <br />
-            {{-- <div class="form-group">  
-              @php($criteria=0)            
-            <h6>Criteria</h6>
-            <form action="/stretcher"  >
-            <select class="custom-select selector" name="criteria" id="criteria" onchange="form.submit()">
-              {{-- <option selected>
-                Seleccione el área al que pertenece el equipo
-              </option> --}}
-              {{-- <option value="0">Biomédica</option>
-              <option value= "1" >Infraestructura</option>
-              <option value= "2">Sistemas</option>
-              <option value= "3"  >N/A</option>
-            </select>
-          </div> --}}
-          <br />
-        <h1 align="center">Stretcher Mobile Criteria</h1>
+        <br />
+        <h1 align="center">Stretcher Mobile Technical Criteria</h1>
+        <br />
         <div class="row tbl-fixed" style="overflow: auto"> 
           <table border="1" class="table table-hover table-ligth  table-bordered table-stripe" >
             <thead class="table-secondary">

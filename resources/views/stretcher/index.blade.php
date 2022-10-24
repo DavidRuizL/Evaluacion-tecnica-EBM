@@ -35,6 +35,7 @@
           <div class="container" >
           <br />
         <h1 align="center">Stretcher Mobile vs ECRI</h1>
+          <br><br>
         <div class="row tbl-fixed" style="overflow: auto"> 
           <table border="1" class="table table-hover table-ligth  table-bordered table-stripe" >
             <thead class="table-secondary">
@@ -349,6 +350,7 @@
         <div class="abs-center">
         <a href="/stretcher/select" class="btn btn-primary" >Back</a>
         </div>
+          <br><br>
       <br><br>
     </div>
 @endsection

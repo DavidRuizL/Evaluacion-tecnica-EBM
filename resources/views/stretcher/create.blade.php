@@ -13,8 +13,9 @@
 </style>
 
 <h1 align="center">NEW DEVICE</h1>
+    <br><br>
 <div class='container'>
-    <form action="{{route('stretcher.index')}}" method="post" >
+    <form action="{{route('stretcher.index')}}" method="post"  >
         @csrf
         <div class="row g-3">
               <div class="form-group col-md-4 mb-3">
@@ -190,9 +191,18 @@
             </div> 
             <br><br>
             <div class="abs-center">
-        <button type="submit" class= "btn btn-primary" tabindex="6">Guardar</button>
-        <a href="/stretcher" class="btn btn-danger" tabindex="5">Cancelar</a>
-            </div>
+        <button type="submit" class= "btn btn-primary" id="send">Guardar</button>
+        <a href="/stretcher/select" class="btn btn-danger" tabindex="5">Cancelar</a>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>     
+        <script>
+        $(document).ready(function(){
+            $("#send").click(function(){
+                var seleccion= $(this).children("#Manufacturer").val();
+                alert(  "New Device has been created");
+            });
+        });
+        </script>
+    </div>
     </form>
      <br><br>
     <br><br>

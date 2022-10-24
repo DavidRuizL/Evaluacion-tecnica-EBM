@@ -103,7 +103,7 @@ class StretcherController extends Controller
         $Stretcher ->OtherSpecifications=$request->get('OtherSpecifications');                   
         $Stretcher ->UMDNSCode=$request->get('UMDNSCode');       
         $Stretcher ->save();
-        return redirect('/stretcher');
+        return redirect('/stretcher/select');
     }
 
     /**
@@ -185,7 +185,7 @@ class StretcherController extends Controller
         $Stretcher ->OtherSpecifications=$request->input('OtherSpecifications');                   
         $Stretcher ->UMDNSCode=$request->input('UMDNSCode');       
         $Stretcher ->save();
-        return redirect()->route('stretcher.index');
+        return redirect()->route('stretcher.select');
 
     }
 
