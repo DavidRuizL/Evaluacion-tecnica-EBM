@@ -11,10 +11,11 @@
   justify-content: center;
 }
 </style>
-
-<h1 align="center">EDIT DEVICE</h1>
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<h1 align="center">Edit Technical Criteria</h1>
+<br><br>
 <div class='container'>
-    <form action="{{route('stretcher.update' ,$stretcher->id)}}" method="post" >
+    <form action="{{route('stretcher.update' ,$stretcher->id)}}"  method="post" >
         @csrf
         @method('PUT')
         <div class="row g-3">
@@ -192,8 +193,17 @@
             <br><br>
             <div class="container">
             <div class="abs-center">
-        <button type="submit" class= "btn btn-primary" tabindex="6">Guardar</button>
-        <a href="/stretcher" class="btn btn-danger" tabindex="5">Cancelar</a>
+        <button type="submit" class= "btn btn-primary" id="send">Guardar</button>
+        <a href="/stretcher/criteria" class="btn btn-danger" tabindex="5">Cancelar</a>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#send").click(function(){
+            var seleccion= $(this).children("option:selected").val();
+            alert("<?php echo $stretcher["Manufacturer"]; ?>" + "  Has been updated");
+        });
+    });
+    </script>
             </div>
             </div>
     </form>
