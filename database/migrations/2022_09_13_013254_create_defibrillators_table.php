@@ -16,42 +16,43 @@ return new class extends Migration
         Schema::create('Defibrillators', function (Blueprint $table) {
             $table->id();
             //Energy selection, J
-            $table->string('Manufacturer');
-            $table->string('Internal');
-            $table->string('External');
-            $table->string('PaddleControls');
-            $table->string('WaveformShape');
-            $table->string('Synchronizer');
-            $table->string('PediatricPaddles');
-            $table->string('OptionalPaddles');
-            $table->string('DisposablePediatricElectrodes');
-            $table->string('AEDMode');
+            $table->string('Manufacturer')->nullable();
+            $table->string('Internal')->nullable();
+            $table->string('External')->nullable();
+            $table->string('PaddleControls')->nullable();
+            $table->string('WaveformShape')->nullable();
+            $table->string('Synchronizer')->nullable();
+            $table->string('PediatricPaddles')->nullable();
+            $table->string('OptionalPaddles')->nullable();
+            $table->string('DisposablePediatricElectrodes')->nullable();
+            $table->string('AEDMode')->nullable();
             //ECG MONITOR
-            $table->string('RealIimeCPRFeedback');
-            $table->string('ECGMonitorType');
-            $table->string('ECGMonitorScreen');
-            $table->string('LeadConfiguration');
-            $table->string('ThroughThePaddlesMonitoring');
-            $table->string('HRDisplay');
-            $table->string('HRAlarms');
-            $table->string('LeadFaultIndicator');
-            $table->string('ExternalPacemaker');
-            $table->string('PacingMode');
-            $table->string('PacingRate');
-            $table->string('OutputCurrent');
-            $table->string('PulseWidth');
-            $table->string('EcgRecorder');
-            $table->string('SummaryFeature');
+            $table->string('RealIimeCPRFeedback')->nullable();
+            $table->string('ECGMonitorType')->nullable();
+            $table->string('ECGMonitorScreen')->nullable();
+            $table->string('LeadConfiguration')->nullable();
+            $table->string('ThroughThePaddlesMonitoring')->nullable();
+            $table->string('HRDisplay')->nullable();
+            $table->string('HRAlarms')->nullable();
+            $table->string('LeadFaultIndicator')->nullable();
+            $table->string('ExternalPacemaker')->nullable();
+            $table->string('PacingMode')->nullable();
+            $table->string('PacingRate')->nullable();
+            $table->string('OutputCurrent')->nullable();
+            $table->string('PulseWidth')->nullable();
+            $table->string('EcgRecorder')->nullable();
+            $table->string('SummaryFeature')->nullable();
             //BATTERY
-            $table->string('LinePower');  
-            $table->string('BatteryPower');
-            $table->string('Type');
-            $table->string('IntegratedOrRemovable');
-            $table->string('OperatingTime');
-            $table->string('RechargeTime');
-            $table->string('Weight');
-            $table->string('ExternalOutputs');
+            $table->string('LinePower')->nullable();
+            $table->string('BatteryPower')->nullable();
+            $table->string('Type')->nullable();
+            $table->string('IntegratedOrRemovable')->nullable();
+            $table->string('OperatingTime')->nullable();
+            $table->string('RechargeTime')->nullable();
+            $table->string('Weight')->nullable();
+            $table->string('ExternalOutputs')->nullable();
             $table->timestamps();
+
         });
     }
 

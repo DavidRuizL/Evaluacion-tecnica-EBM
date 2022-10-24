@@ -17,49 +17,50 @@ return new class extends Migration
             $table->id();
             //OXIMETER CAPABILITIES
 
-            $table->string('Manufacturer');
-            $table->string('WhereMarketed');
-            $table->string('FDAClearance');
-            $table->string('CeMark');
-            $table->string('StandAlone');
-            $table->string('MountingOptions');
+            $table->string('Manufacturer')->nullable();
+            $table->string('WhereMarketed')->nullable();
+            $table->string('FDAClearance')->nullable();
+            $table->string('CeMark')->nullable();
+            $table->string('StandAlone')->nullable();
+            $table->string('MountingOptions')->nullable();
             //DISPLAY
-            $table->string('Display');
-            $table->string('TypeDisplay');
-            $table->string ('SpO2Range');
-            $table->string('AccuracyDisplay');
+            $table->string('Display')->nullable();
+            $table->string('TypeDisplay')->nullable();
+            $table->integer ('SpO2Range')->nullable();
+            $table->integer('AccuracyDisplay')->nullable();
             //PULSE RATE, BPM
-            $table->string('PulseRatebpm');
-            $table->string ('AccuracyPulse');
-            $table->string ('PerfusionIndex');
-            $table->string('ResponseTime');
+            $table->integer('PulseRatebpm')->nullable();
+            $table->integer ('AccuracyPulse')->nullable();
+            $table->string ('PerfusionIndex')->nullable();
+            $table->string('ResponseTime')->nullable();
             
             //ALARMS
-            $table->string('AudibleAndVisual');
-            $table->string ('Visual');
-             $table->string('AlarmOverride');
-             $table->string('ReactivationMethod');
-             $table->string('VolumeControl');
-             $table->string('SelfTestMode');
+            $table->string('AudibleAndVisual')->nullable();
+            $table->string ('Visual')->nullable();
+             $table->string('AlarmOverride')->nullable();
+             $table->string('ReactivationMethod')->nullable();
+             $table->string('VolumeControl')->nullable();
+             $table->string('SelfTestMode')->nullable();
             //PROBE TYPES
-            $table->string('Disposable');
-            $table->string('Reusable');
-            $table->string('PatientRange');
-            $table->string('CableLength');
+            $table->string('Disposable')->nullable();
+            $table->string('Reusable')->nullable();
+            $table->string('PatientRange')->nullable();
+            $table->string('CableLength')->nullable();
             //DATA MANAGEMENT
-            $table->string('DataStored');
-            $table->string('DataSorage');
-            $table->string('MRIConditional');
+            $table->string('DataStored')->nullable();
+            $table->string('DataSorage')->nullable();
+            $table->string('MRIConditional')->nullable();
             //BatteryType
-            $table->string('BarreryType');
-            $table->string('BatteryLife');
-            $table->string('Rechargeable');
-            $table->string('ReacharbleTime');
-            $table->string('LowBatteryNotice');
+            $table->string('BarreryType')->nullable();
+            $table->integer('BatteryLife')->nullable();
+            $table->string('Rechargeable')->nullable();
+            $table->integer('ReacharbleTime')->nullable();
+            $table->string('LowBatteryNotice')->nullable();
             //Purchase information
-            $table->string('LisPrice');
-            $table->string('Warranty');
+            $table->string('LisPrice')->nullable();
+            $table->string('Warranty')->nullable();
             $table->timestamps();
+
         });
     }
 

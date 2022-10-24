@@ -25,11 +25,11 @@ class OximetersSeeder extends Seeder
             //DISPLAY
             $Oximeters->Display= 'SpO2, pulse rate, pulse strength and/or signal, low battery';
             $Oximeters->TypeDisplay= 'LCD, LED, others';
-            $Oximeters->SpO2Range= '70-100';
-            $Oximeters->AccuracyDisplay= '70-100 ±3';
+            $Oximeters->SpO2Range= 100;
+            $Oximeters->AccuracyDisplay= 3;
             //PULSE RATE, BPM
-            $Oximeters->PulseRatebpm= '30-240';
-            $Oximeters->AccuracyPulse= '±5';
+            $Oximeters->PulseRatebpm= 240;
+            $Oximeters->AccuracyPulse= 5;
             $Oximeters->PerfusionIndex= 'Required, continuous monitors; preferred, spot check monitors';
             $Oximeters->ResponseTime= 'Depends on application';
             
@@ -51,9 +51,9 @@ class OximetersSeeder extends Seeder
             $Oximeters->MRIConditional= 'Required for use in MRI environment';
             //BatteryType
             $Oximeters->BarreryType= '';
-            $Oximeters->BatteryLife= '4 intrahospital, 8 interhospital';
+            $Oximeters->BatteryLife= 8;
             $Oximeters->Rechargeable= 'Preferred; optional for handheld';
-            $Oximeters->ReacharbleTime= '≤16';
+            $Oximeters->ReacharbleTime= 16;
             $Oximeters->LowBatteryNotice= 'Preferred';
             //Purchase information
             $Oximeters->LisPrice= '';
