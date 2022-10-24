@@ -13,7 +13,7 @@ class InfusionPump extends Model
     protected $fillable = [
         
             //PUMP CAPABILITIES
-            'FDAClearance','Tabletop/ambulatory','PCADoseButtonLocation','PumpMechanism','PoleMounting','Increments','BolusDose','IncrementBolusDose','LoadingDose','KVORate(mL/hr)','Accuracy(%)','NurseCallJack','FreeFlowProtection','LockoutIntervalRange(min)',
+            'Manufacturer','FDAClearance','Tabletop/ambulatory','PCADoseButtonLocation','PumpMechanism','PoleMounting','Increments','BolusDose','IncrementBolusDose','LoadingDose','KVORate(mL/hr)','Accuracy(%)','NurseCallJack','FreeFlowProtection','LockoutIntervalRange(min)',
             'AccumulatedDoseLimit','ControlsAccess','ReservoirType','VolumeCapacity(mL)', 'Access', 'SyringeSizeDetection',
             //DISPLAY
             'Display','DataDisplay', 
