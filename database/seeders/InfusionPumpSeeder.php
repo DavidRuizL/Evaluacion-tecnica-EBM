@@ -6,7 +6,7 @@ use App\Models\InfusionPump;
 use Illuminate\Database\Seeder;
 
 
-class InfusionPumpSeeder extends Seeder
+class InfusionpumpSeeder extends Seeder
 {
     /**
      * Run the database seeds.
