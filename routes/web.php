@@ -20,6 +20,7 @@ Route::get('/',  'App\Http\Controllers\HomeController');
 
 
 //STRETCHER
+Route::get('stretcher/create', [StretcherController::class , 'create'])->name('stretcher.create');
 Route::get('stretcher/criteria', [StretcherController::class , 'criteria'])->name('stretcher.criteria');
 Route::get('stretcher/select', [StretcherController::class , 'select'])->name('stretcher.select');
 Route::get('stretcher/per1', [StretcherController::class, 'index1' ])->name('stretcher.per1');
@@ -30,6 +31,7 @@ Route::resource('stretcher', StretcherController::class);
 
 
 //ANESTHESIA
+Route::get('aunit/create', [AnesthesiaUnitController::class , 'create'])->name('aunit.create');
 Route::get('aunit/criteria', [AnesthesiaUnitController::class , 'criteria'])->name('aunit.criteria');
 Route::get('aunit/select', [AnesthesiaUnitController::class , 'select'])->name('aunit.select');
 Route::get('aunit/per1', [AnesthesiaUnitController::class, 'index1' ])->name('aunit.per1');

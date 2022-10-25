@@ -12,7 +12,7 @@
 }
 </style>
 <br><br>
-<h1 align="center">STRETCHER</h1>
+<h1 align="center">ANESTHESIA UNIT</h1>
 <h1 align="center">SELECT CRITERIA</h1>
 <br><br>
 <br><br>
@@ -23,17 +23,17 @@
     Select Option
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <form action="{{route('stretcher.index')}}" method="get">
-          <li><a class="dropdown-item" href="{{route('stretcher.index')}}">ECRI</a></li>
+        <form action="{{route('aunit.index')}}" method="get">
+          <li><a class="dropdown-item" href="{{route('aunit.index')}}">ECRI</a></li>
         </form>
-        <form action="{{route('stretcher.index')}}" method="get">
-          <li><a class="dropdown-item" href="{{route('stretcher.per1')}}">Personalized 1</a></li>
+        <form action="{{route('aunit.index')}}" method="get">
+          <li><a class="dropdown-item" href="{{route('aunit.per1')}}">Personalized 1</a></li>
           </form>
-        <form action="{{route('stretcher.index')}}" method="get">
-          <li><a class="dropdown-item" href="{{route('stretcher.per2')}}">Personalized 2</a></li>
+        <form action="{{route('aunit.index')}}" method="get">
+          <li><a class="dropdown-item" href="{{route('aunit.per2')}}">Personalized 2</a></li>
           </form>
-        <form action="{{route('stretcher.index')}}" method="get">
-          <li><a class="dropdown-item" href="{{route('stretcher.per3')}}">Personalized 3</a></li>            
+        <form action="{{route('aunit.index')}}" method="get">
+          <li><a class="dropdown-item" href="{{route('aunit.per3')}}">Personalized 3</a></li>            
           </form>           
   </ul>
 </div>

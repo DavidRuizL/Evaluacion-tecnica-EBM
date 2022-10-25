@@ -14,45 +14,45 @@ return new class extends Migration
     public function up()
     {
         Schema::create('AnesthesiaUnits', function (Blueprint $table) {
-            $table->id();
-            $table->string('Manufacturer');
-            $table->string('WhereMarketed');
-            $table->string('FDAClearance');
-            $table->string('Configuration');
-            $table->string('PipelineGasInletsO2');
-            $table->string('PipelineGasInletsN2O');
-            $table->string('PipelineGasInletsAir');
-            $table->string('GasCylinderYokesO2');
-            $table->string('GasCylinderYokesN2O');
-            $table->string('GasCylinderYokesAir');
-            $table->string('VaporizersDesflurane');
-            $table->string('VaporizersEnflurane');
-            $table->string('VaporizersHalothane');
-            $table->string('VaporizersIsoflurane');
-            $table->string('VaporizersSevoflurane');
-            $table->string('Type');
-            $table->string('ElectronicallyControlled');
-            $table->string('Interlock');
-            $table->string('O2FailSafe');
-            $table->string('HypoxicMixtureFailSafe');
-            $table->string('AutomaticVentilator');
-            $table->string('VM_Manual_spontaneous');
-            $table->string('VM_VCV');
-            $table->string('VM_SIMV');
-            $table->string('VM_AdvancedModes');
-            $table->Integer('RangeCC');
-            $table->integer('CC');
-            $table->integer('RangeLm');
-            $table->integer('bpmH');
-            $table->integer('bpmL');
-            $table->integer('InspiratoryFlowH');
-            $table->integer('InspiratoryFlowL');
-            $table->integer('InspiratoryPause');
-            $table->integer('Pressurelimit');
-            $table->integer('PEEP');
-            $table->string('OtherControls');
-            $table->string('SystemChecks');
-            $table->string('ScavengingSystem');
+            $table->id()->nullable();
+            $table->string('Manufacturer')->nullable();
+            $table->string('WhereMarketed')->nullable();
+            $table->string('FDAClearance')->nullable();
+            $table->string('Configuration')->nullable();
+            $table->string('PipelineGasInletsO2')->nullable();
+            $table->string('PipelineGasInletsN2O')->nullable();
+            $table->string('PipelineGasInletsAir')->nullable();
+            $table->string('GasCylinderYokesO2')->nullable();
+            $table->string('GasCylinderYokesN2O')->nullable();
+            $table->string('GasCylinderYokesAir')->nullable();
+            $table->string('VaporizersDesflurane')->nullable();
+            $table->string('VaporizersEnflurane')->nullable();
+            $table->string('VaporizersHalothane')->nullable();
+            $table->string('VaporizersIsoflurane')->nullable();
+            $table->string('VaporizersSevoflurane')->nullable();
+            $table->string('Type')->nullable();
+            $table->string('ElectronicallyControlled')->nullable();
+            $table->string('Interlock')->nullable();
+            $table->string('O2FailSafe')->nullable();
+            $table->string('HypoxicMixtureFailSafe')->nullable();
+            $table->string('AutomaticVentilator')->nullable();
+            $table->string('VM_Manual_spontaneous')->nullable();
+            $table->string('VM_VCV')->nullable();
+            $table->string('VM_SIMV')->nullable();
+            $table->string('VM_AdvancedModes')->nullable();
+            $table->Integer('RangeCC')->nullable();
+            $table->integer('CC')->nullable();
+            $table->integer('RangeLm')->nullable();
+            $table->integer('bpmH')->nullable();
+            $table->integer('bpmL')->nullable();
+            $table->integer('InspiratoryFlowH')->nullable();
+            $table->integer('InspiratoryFlowL')->nullable();
+            $table->integer('InspiratoryPause')->nullable();
+            $table->integer('Pressurelimit')->nullable();
+            $table->integer('PEEP')->nullable();
+            $table->string('OtherControls')->nullable();
+            $table->string('SystemChecks')->nullable();
+            $table->string('ScavengingSystem')->nullable();
 
 
 
@@ -60,27 +60,27 @@ return new class extends Migration
 
 
 
-           $table->string('Number');
-            $table->string('TypeD');
-            $table->string('IntegratedPM');
-            $table->string('InterfacePM');
-            $table->string('UserInterface');
-            $table->string('PrioritizedAlarms');
+           $table->string('Number')->nullable();
+            $table->string('TypeD')->nullable();
+            $table->string('IntegratedPM')->nullable();
+            $table->string('InterfacePM')->nullable();
+            $table->string('UserInterface')->nullable();
+            $table->string('PrioritizedAlarms')->nullable();
 
-            $table->string('HxWxD');
-            $table->string('Weight');
-            $table->string('Shelves');
-            $table->string('Drawers');
-            $table->string('CentralBrake');
-            $table->string('PowerVAC');
-            $table->string('AuxiliaryOutlets');
-            $table->string('BackupBattery');
-            $table->string('UsePerCharge');
+            $table->string('HxWxD')->nullable();
+            $table->string('Weight')->nullable();
+            $table->string('Shelves')->nullable();
+            $table->string('Drawers')->nullable();
+            $table->string('CentralBrake')->nullable();
+            $table->string('PowerVAC')->nullable();
+            $table->string('AuxiliaryOutlets')->nullable();
+            $table->string('BackupBattery')->nullable();
+            $table->integer('UsePerCharge')->nullable();
             //PURCHASE INFORMATION
-            $table->string('Warranty');
-            $table->string('ServiceContract');
-            $table->string('DeliveryTime');
-            $table->string('OtherSpecifications');
+            $table->string('Warranty')->nullable();
+            $table->string('ServiceContract')->nullable();
+            $table->string('DeliveryTime')->nullable();
+            $table->string('OtherSpecifications')->nullable();
             $table->timestamps();
 
         });

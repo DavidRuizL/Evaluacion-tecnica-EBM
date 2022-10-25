@@ -46,8 +46,8 @@
                           <form action="{{route('stretcher.select')}}" method="get">
                             <li><a class="dropdown-item" href="{{route('stretcher.select')}}">Stretcher</a></li>
                           </form>
-                          <form action="{{route('aunit.index')}}" method="get">
-                            <li><a class="dropdown-item" href="{{route('aunit.index')}}">Anesthesia Unit</a></li>
+                          <form action="{{route('aunit.select')}}" method="get">
+                            <li><a class="dropdown-item" href="{{route('aunit.select')}}">Anesthesia Unit</a></li>
                           </form>
                         </ul>
                     </li>
@@ -59,8 +59,8 @@
                           <form action="{{route('stretcher.create')}}" method="get">
                             <li><a class="dropdown-item" href="{{route('stretcher.create')}}">Stretcher</a></li>
                           </form>
-                          <form action="{{route('aunit.index')}}" method="get">
-                            <li><a class="dropdown-item" href="{{route('aunit.index')}}">Anesthesia Unit</a></li>
+                          <form action="{{route('aunit.create')}}" method="get">
+                            <li><a class="dropdown-item" href="{{route('aunit.create')}}">Anesthesia Unit</a></li>
                           </form>
                         </ul>
                     </li>
@@ -73,9 +73,9 @@
                           <form action="{{route('stretcher.criteria')}}" method="get">
                             <li><a class="dropdown-item" href="{{route('stretcher.criteria')}}">Stretcher</a></li>
                           </form>
-                          {{-- <form action="{{route('aunit.criteria')}}" method="get">
+                          <form action="{{route('aunit.criteria')}}" method="get">
                             <li><a class="dropdown-item" href="{{route('aunit.criteria')}}">Anesthesia Unit</a></li>
-                          </form> --}}
+                          </form>
                         </ul>
                   </li>
           </ul>

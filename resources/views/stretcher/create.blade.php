@@ -12,10 +12,10 @@
 }
 </style>
 
-<h1 align="center">NEW DEVICE</h1>
+<h1 align="center">NEW STRETCHER</h1>
     <br><br>
 <div class='container'>
-    <form action="{{route('stretcher.index')}}" method="post"  >
+    <form action="{{route('stretcher.store')}}" method="post"  >
         @csrf
         <div class="row g-3">
               <div class="form-group col-md-4 mb-3">

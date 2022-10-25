@@ -16,8 +16,7 @@ class InfusionPumpSeeder extends Seeder
     public function run()
     {
         $InfusionPump = new InfusionPump;
-        //PUMP CAPABILITIES
-       
+        //PUMP CAPABILITIES   
         $InfusionPump->FDAClearance= '';
         $InfusionPump->Tabletopambulatory= '';
         $InfusionPump->PCADoseButtonLocation= 'On pump or bolus cord';

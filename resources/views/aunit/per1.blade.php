@@ -4,12 +4,13 @@
     
 @section('content')
     <style>
-      
+  
   .abs-center {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
       table, th, td {
         padding: 5px;
         text-align:center;
@@ -415,7 +416,7 @@
                       <td>{{$anesthesiaunit->OtherSpecifications}}</td>
                       <td>{{$score}}</td>
                       <td><a href="{{route('aunit.edit' , $anesthesiaunit->id)}}" class="btn btn-primary">Edit</a>
-                            </td>                      
+                            </td>                          
                       @php($scoreList+= [ $anesthesiaunit->id=> $score ])
                   @endif
                   
@@ -453,7 +454,7 @@
       </table>
       <br><br>
         <div class="abs-center">
-        <a href="aunit/select" class="btn btn-primary" >Back</a>
+        <a href="/aunit/select" class="btn btn-primary" >Back</a>
         </div>
           <br><br>
       <br><br>
