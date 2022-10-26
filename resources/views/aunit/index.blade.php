@@ -108,7 +108,7 @@
 
                @foreach ($anesthesiaunits as $anesthesiaunit)
                {{-- ($anesthesiaunit->id ==1) OR --}}
-                  @if( ($anesthesiaunit->id ==2) OR ($anesthesiaunit->id ==3) OR ($anesthesiaunit->id ==4))
+                  @if( ($anesthesiaunit->id ==1) OR ($anesthesiaunit->id ==2) OR ($anesthesiaunit->id ==3) OR ($anesthesiaunit->id ==4))
                   @else       
                     @php($score=0)
                     <tr>
@@ -354,7 +354,7 @@
                           
 
                       {{-- DISPLAYS --}}
-                        @if((($anesthesiaunit->Number) <=($anesthesiaunits[0]->Number) )OR ($anesthesiaunits[0]->CC==0) )
+                        @if((($anesthesiaunit->Number) >=($anesthesiaunits[0]->Number) )OR ($anesthesiaunits[0]->CC==0) )
                           <td>{{$anesthesiaunit->Number}}</td>
                           @php($score++)
                         @else               
@@ -404,6 +404,7 @@
                         @if((($anesthesiaunit->UsePerCharge) >=($anesthesiaunits[0]->UsePerCharge) )OR ($anesthesiaunits[0]->CC==0) )
                           <td>{{$anesthesiaunit->UsePerCharge}}</td>
                           @php($score++)
+                          @php($score=round($score*(100/39)))
                         @else               
                           <td class="fuera">{{$anesthesiaunit->UsePerCharge}}</td>
                         @endif                             
@@ -439,16 +440,18 @@
             </tr>
            </thead>
            <tbody>
-              {{-- @for ($i =0; $i <=1; $i++)
-               @php($key_of_max = array_search( max($scoreList) , $scoreList)) 
-                <tr>
-                  <td>{{$anesthesiaunits[$key_of_max-2]->Manufacturer}}</td>
-                  <td>{{$anesthesiaunits[$key_of_max-2]->WhereMarketed}}</td>
-                  <td>{{$anesthesiaunits[$key_of_max-2]->Configuration}}</td>
-                  <td>{{max($scoreList)}}</td>
-                </tr> --}}
-            {{-- @php(unset($scoreList[$key_of_max])) --}}
-          {{-- @endfor --}}
+          @for ($i =0; $i <=2; $i++)
+            @php($key_of_max = array_search( max($scoreList) , $scoreList)) 
+            <tr>
+              <td>{{$anesthesiaunits[$key_of_max]->Manufacturer}}</td>
+              <td>{{$anesthesiaunits[$key_of_max]->WhereMarketed}}</td>
+              <td>{{$anesthesiaunits[$key_of_max]->Configuration}}</td>
+              <td>{{max($scoreList)}}</td>
+            </tr>
+            <?php
+            unset($scoreList[$key_of_max]);
+            ?>
+          @endfor
         </tbody>
       </table>
       <br><br>
